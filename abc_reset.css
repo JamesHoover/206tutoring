@@ -1,17 +1,28 @@
 /* 
 ** abc_reset.css
 ** Reset stylesheet for www.206tutoring.com
-** Author: James Hoover
+** Author: James Hoover (jamesfhoover@gmail.com)
 ** Copyright: 2015
 */
 
-/* Apply a natural box layout model to all elements */
+/* Apply a natural box layout model, anti aliased font, and auto text adjustment to all elements */
 *,
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+      -ms-font-smoothing: antialiased;
+       -o-font-smoothing: antialiased;
+          font-smoothing: antialiased;
+
+  -webkit-text-size-adjust: auto;
+     -moz-text-size-adjust: auto;
+      -ms-text-size-adjust: auto;
+       -o-text-size-adjust: auto;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 

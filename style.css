@@ -1,6 +1,145 @@
 /* 
 ** style.css
 ** Stylesheet for www.206tutoring.com
-** Author: James Hoover
+** Author: James Hoover (jamesfhoover@gmail.com)
 ** Copyright: 2015
 */
+
+/* TODO:
+*/
+
+/* HTML Elements 
+========================= */
+html { 
+  font-family: 			sans-serif;
+  background-color: #F5F5F5;
+  font-size: 				16px;
+  font-family: 			"Open Sans", Helvetica, Arial, Sans-Serif;
+}
+html, body {
+	height: 	 100%;
+  font-size: 100%;
+}
+/* Standardize font size */
+h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+h3 {font-size: 1.125em;}
+h4 {font-size: 1em;} /* Same size as paragraph */
+h5 {font-size: .875em;}
+h6 {font-size: .75em;}
+p {
+	font-size: 1em;
+  line-height: 1.375em;
+}
+
+/* Links
+========================= */
+a {
+	text-decoration: none;
+	color: 					 #167CEF; /* blue */
+}
+/* UNIQUE PAGE CONTENT
+========================= */
+nav {
+	width: 100%;
+	height: 60px;
+}
+/* will probably turn this to img */
+#nav_logo {
+	display: 	 inline-block;
+	color: 		 black;
+	font-size: 2em;
+}
+nav li {display: inline-block;}
+
+/* Sections
+========================= */
+#header {}
+#front_quote {
+	text-align: center;
+	/* These two lines prevent collapsing of container when floats inside */ 
+	overflow: auto; 
+	width:		100%;
+}
+.quote_block {
+	display: 	inline-block;
+	width: 		25%;
+}
+#front_about {background-color: white;}
+.portrait {
+	width: 	60px;
+	height: 60px;
+}
+.about_block {width: 45%;}
+#services li {display: inline-block;}
+
+
+/* Footer
+========================= */
+footer {
+	background-color: #040404;
+	color: 						white;
+	/* These two lines prevent collapsing of container when floats inside */ 
+	overflow:	auto; 
+	width:		100%;
+}
+
+/* Buttons
+========================= */
+.btn_orange	 {
+	padding: 5px 15px;
+	color: white;
+	background-color: #FB8A2A; /* orange */
+	display: inline-block;
+  padding: 8px 30px;
+  margin: 5px 0px;
+  text-shadow: none;
+  color: #fff;
+  font-size: 1em !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
+     -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
+      -ms-box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
+       -o-box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
+          box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
+}
+
+/* GENERAL STYLE
+========================= */
+/* wraps the content in sections to keep centered on page*/
+.content {max-width: 1080px; margin: 0 auto;}
+.floated {
+	/* These two lines prevent collapsing of container when only floats inside */ 
+	overflow:	auto; 
+	width:		100%;
+}
+.paragraph {}
+
+/* Typography */
+.uppercase 	{text-transform: uppercase;}
+.capitalize {text-transform: capitalize;}
+.bold 			{font-weight: bold;}
+.italic 		{font-style: italic;}
+.underline 	{text-decoration: underline;}
+.justify 		{text-align: justify;}
+
+/* Display */
+.block 				{display: block;}
+.inline 			{display: inline;}
+.inline_block {display: inline-block;}
+
+
+/* Position*/
+.static 	{position: static;}
+.relative {position: relative;}
+.absolute {position: absolute;}
+.fixed 		{position: fixed;}
+
+/* Alignment */
+.float_right 	{float: right;}
+.float_left 	{float: left;}
+.center_text 	{text-align: center;}
+.center_block {margin: 0px auto;}

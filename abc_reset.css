@@ -1,11 +1,18 @@
 /* 
 ** abc_reset.css
-** Reset stylesheet for www.206tutoring.com
+** Reset + common issue fixes stylesheet for www.206tutoring.com
 ** Author: James Hoover (jamesfhoover@gmail.com)
 ** Copyright: 2015
 */
 
-/* Apply a natural box layout model, anti aliased font, and auto text adjustment to all elements */
+/* If no need for IE6/7 support use this instead (removed zoom and :before) */
+.clearfix:after {
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/* Apply a natural box layout model, anti aliased font, and auto text adjustment (used for mobile) to all elements */
 *,
 *:before,
 *:after {

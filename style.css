@@ -8,8 +8,6 @@
 /* TODO:
 */
 
-.space {width: 100%; height: 10px;}
-
 /* HTML Elements 
 ========================= */
 html { 
@@ -34,35 +32,64 @@ p {
   line-height: 1.375em;
 }
 
+.a-slide{
+  height: 100%;
+  width: 100%;
+  background-size: cover !important;
+
+}
+.slick-slider{
+  height: 300px;
+}
+
+.slick-list,
+.slick-track {
+  height: 100%;
+}
+
+
+.slick_absolute {position: absolute; z-index: 1; top:0; left:0; right: 0;}
+
 /* Links
 ========================= */
-a {
-	text-decoration: none;
-	color: 					 #167CEF; /* blue */
+a,
+a:link,
+a:visited,
+a:active,
+a:hover {
+  color: 	#167CEF; /* blue */
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+a:hover {
+  color: red;
 }
 /* UNIQUE PAGE CONTENT
 ========================= */
 nav {
+	color: white;
+	position: absolute;
 	width: 100%;
 	height: 60px;
+	z-index: 1050;
 }
 /* will probably turn this to img */
 #nav_logo {
-	display: 	 inline-block;
-	color: 		 black;
 	font-size: 2em;
+	color: 		 white;
 }
-nav ul {display: block; margin: 0 auto; width: 300px;}
+nav ul {width: 300px;} /* needs width to center */
 nav li {display: inline;}
+a.nav_link {color: white;}
 
 /* Sections
 ========================= */
-#header {}
+section {padding: 25px 0;}
+#header {height: 300px;} /* same as .slick-slider */
+#header_text {clear: both;}
 #front_quote {
 	text-align: center;
-	/* These two lines prevent collapsing of container when floats inside */ 
-	overflow: auto; 
-	width:		100%;
 }
 .quote_block {
 	display: 	inline-block;
@@ -74,21 +101,23 @@ nav li {display: inline;}
 	height: 60px;
 }
 .about_block {width: 45%;}
-#services li {display: inline-block;}
+#services li {display: inline;}
 
 
 /* Footer
 ========================= */
 footer {
+	position: relative;
+  right: 	0;
+  bottom: 0;
+  left: 	0;
 	background-color: #040404;
 	color: 						white;
-	/* These two lines prevent collapsing of container when floats inside */ 
-	overflow:	auto; 
-	width:		100%;
 }
 
 /* Buttons
 ========================= */
+a.btn_orange,
 .btn_orange	 {
 	padding: 5px 15px;
 	color: white;
@@ -97,7 +126,7 @@ footer {
   padding: 8px 30px;
   margin: 5px 0px;
   text-shadow: none;
-  color: #fff;
+  color: #FFFFFF;
   font-size: 1em !important;
   text-decoration: none;
   text-transform: uppercase;
@@ -109,16 +138,28 @@ footer {
        -o-box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
           box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
 }
+a.btn-orange:hover,
+.btn-orange:hover {
+  color: #000000;
+  -webkit-box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
+     -moz-box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
+      -ms-box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
+       -o-box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
+          box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
+}
 
 /* GENERAL STYLE
 ========================= */
 /* wraps the content in sections to keep centered on page*/
 .content {max-width: 1080px; margin: 0 auto;}
+
 .floated {
 	/* These two lines prevent collapsing of container when only floats inside */ 
 	overflow:	auto; 
 	width:		100%;
 }
+.read_more {clear: both;}
+
 .paragraph {}
 
 /* Typography */
@@ -146,3 +187,6 @@ footer {
 .float_left 	{float: left;}
 .center_text 	{text-align: center;}
 .center_block {margin: 0px auto;}
+
+.top_right 	{position: absolute; top:0; right:0;}
+.top_left 	{position: absolute; top:0;}

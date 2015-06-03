@@ -5,34 +5,57 @@
 	<!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css"> -->
 	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/abc_reset.css">
 	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/style.css">
+	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/slick/slick-theme.css"/>
 	<title>206Tutoring</title>
 </head>
 <body>
 	<div id="wrapper">
+
 		<section id="header">
-				<nav>
-					<a href="" id="nav_logo" class="float_left" title="Home">206 Tutoring</a>
-					<a href="" class="btn_orange float_right">Schedule</a>
-					<ul id="nav" class="center_text">
-						<li><a href="">Tutoring</a></li>
-						<li><a href="">Lessons</a></li>
-						<li><a href="">About</a></li>
-						<li><a href="">Contact</a></li>
-					</ul>
-				</nav>
-				<div id="img_carousel"></div>
-				<div  class="center_text">
+			<div class="slick_absolute">
+				<div class="slick-slider">
+		    	<div class="a-slide" style="background: url('https://41.media.tumblr.com/7274e5d84a2515b153e313f3eef594fe/tumblr_mnyp18Ya8E1somw7ho8_540.png') no-repeat center center"></div>
+		    	<div class="a-slide" style="background: url('https://36.media.tumblr.com/0a4d7e8c506bac3487d06e864b27a754/tumblr_mnyp18Ya8E1somw7ho9_540.png') no-repeat center center"></div>
+		  	</div>
+			</div>
+			<nav>
+				<a href="" id="nav_logo" class="float_left" title="Home">206 Tutoring</a>
+				<a href="" class="btn_orange top_right">Schedule</a>
+				<ul id="nav" class="center_text center_block">
+					<li><a href="" class="nav_link">Tutoring</a></li>
+					<li><a href="" class="nav_link">Lessons</a></li>
+					<li><a href="" class="nav_link">About</a></li>
+					<li><a href="" class="nav_link">Contact</a></li>
+				</ul>
+				<div id="header_text" class="center_text">
 					<h1>ONE on ONE TUTORING</h1>
 					<h2>math, english, writing</h2>
 					<a href="" class="btn_orange">Schedule Now</a>
 					<h5>chris@206tutoring.com</h5>
 				</div>
+			</nav>
 		</section><!-- END SECTION header -->
 
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.8/slick.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slick-slider').slick({
+          infinite: true,
+          speed: 1000,
+          arrows: true,
+  				slidesToShow: 1,
+  				slidesToScroll: 1,
+  				autoplay: true,
+  				autoplaySpeed: 7000,
+  				pauseOnHover: false
+      });
+    }); 
 
+  </script>
 		<section id="front_quote">
-			<div class="content">
-				<div class="floated">
+			<div class="content clearfix">
 					<div class="quote_block float_left">
 						<p>"CML is one of the smartest people I've ever met and a patient, thoughtful teacher.
 							having known him both as a friend and a tutor (piano and math), I'd recommend him fully."</p>
@@ -48,40 +71,35 @@
 							My Daughter raised her grade and had more time to devote to extracurriculars."</p>
 						<h4 class="bold">- John C., Bellevue</h4>
 					</div>
-				</div>
-				<a href="" class="float_right">Read More</a>
+				<a href="" class="read_more float_right">Read More</a>
 			</div><!-- END DIV content -->
 		</section><!-- END SECTION front_quote -->
 
 		<section id="front_about">
-			<div class="content">
+			<div class="content clearfix">
 				<img src="" alt="CML Portrait" class="portrait block center_block">
-						<div class="space"></div>
-
-				<div class="floated">
 					<div class="about_block float_left">
 						<p>Hello! My name is Chris Morris-Lent. I'm an experienced...</p>
 						<p>I give group and individual lessons either at my home or the location of your choice!</p>
 						<p>I would like to share my entusiasm for music and knowledge with you or your child!</p>
 					</div>
 					<div class="about_block float_right">
+						<img src="" alt="Columbia" class="float_right" height="60" width="60">
 						<h4 class="bold">Columbia University</h4>
 						<h4>B.A. English Literature - 2010</h4>
-						<img src="" alt="Columbia" class="float_right" height="60" width="60">
 						<h4 class="bold">SAT</h4>
 						<h4>800 Math, 800 Reading, 770 Writing</h4>
 						<h4 class="bold">GRE</h4>
 						<h4>800 Verbal, 790 Math</h4>
+						<img src="" alt="smta" class="float_right" height="60" width="60">
 						<h4 class="bold">Seattle Music Teachers Association</h4>
 						<h4>Certified Piano Teacher - 2013</h4>
-						<img src="" alt="smta" class="float_right" height="60" width="60">
 					</div>
-				</div><!-- END DIV floated -->
-				<a href="" class="float_right">Read More</a>
+				<a href="" class="read_more float_right">Read More</a>
 			</div><!-- END DIV content -->
 		</section><!-- END SECTION front_about -->
 		<section id="services">
-			<div class="content">
+			<div class="content clearfix">
 				<h3 class="center_text">services</h3>
 				<ul id="service_img_block" class="center_text">
 					<li><img src="" alt="SAT" height="125" width="125"></li>
@@ -96,7 +114,7 @@
 			</div><!-- END DIV content -->
 		</section><!-- END SECTION services -->
 		<footer>
-			<div class="content">
+			<div class="content clearfix">
 				<div class="float_left">
 					<div class="footer_logo">206tutoring</div>
 					<h6>&copy;206 Tutoring</h6>
@@ -109,4 +127,13 @@
 			</div><!-- END DIV content -->
 		</footer>
 	</div>
+<!--
+	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="file:///Users/james/Documents/Web/206tutoring/slick/slick.min.js"></script>
+	  <script>
+    $(document).ready(function(){
+      $('.slick-slider').slick();
+    }); 
+  </script> -->
 </body>

@@ -20,7 +20,6 @@ html, body {
 	height: 	 100%;
   font-size: 100%;
 }
-/* Standardize font size */
 h1 {font-size: 2em;}
 h2 {font-size: 1.5em;}
 h3 {font-size: 1.125em;}
@@ -28,27 +27,9 @@ h4 {font-size: 1em;} /* Same size as paragraph */
 h5 {font-size: .875em;}
 h6 {font-size: .75em;}
 p {
-	font-size: 1em;
-  line-height: 1.375em;
+	font-size: 		1em;
+  line-height: 	1.375em;
 }
-
-.a-slide{
-  height: 100%;
-  width: 100%;
-  background-size: cover !important;
-
-}
-.slick-slider{
-  height: 300px;
-}
-
-.slick-list,
-.slick-track {
-  height: 100%;
-}
-
-
-.slick_absolute {position: absolute; z-index: 1; top:0; left:0; right: 0;}
 
 /* Links
 ========================= */
@@ -93,12 +74,12 @@ section {padding: 25px 0;}
 }
 .quote_block {
 	display: 	inline-block;
-	width: 		25%;
+	width: 		30%;
 }
 #front_about {background-color: white;}
 .portrait {
-	width: 	60px;
-	height: 60px;
+	width: 	100px;
+	height: 100px;
 }
 .about_block {width: 45%;}
 #services li {display: inline;}
@@ -147,6 +128,21 @@ a.btn-orange:hover,
        -o-box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
           box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
 }
+/* SLICK SLIDER
+========================= */
+.a-slide{
+  height: 100%;
+  width: 	100%;
+  background-size: cover !important;
+}
+.slick-slider{
+  height: 300px;
+}
+.slick-list,
+.slick-track {
+  height: 100%;
+}
+.slick_absolute {position: absolute; z-index: 1; top:0; left:0; right: 0;}
 
 /* GENERAL STYLE
 ========================= */

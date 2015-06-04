@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- TODO: Change this to correct location -->
+	<!-- TODO: Change routes to correct location when in production -->
 	<!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css"> -->
-	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/abc_reset.css">
-	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/style.css">
+	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/stylesheets/abc_reset.css"> <!-- FIRST -->
 	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/slick/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/slick/slick-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/stylesheets/style.css"> <!-- LAST -->
 	<title>206Tutoring</title>
 </head>
 <body>
@@ -37,23 +37,6 @@
 			</nav>
 		</section><!-- END SECTION header -->
 
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.8/slick.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('.slick-slider').slick({
-          infinite: true,
-          speed: 1000,
-          arrows: true,
-  				slidesToShow: 1,
-  				slidesToScroll: 1,
-  				autoplay: true,
-  				autoplaySpeed: 7000,
-  				pauseOnHover: false
-      });
-    }); 
-
-  </script>
 		<section id="front_quote">
 			<div class="content clearfix">
 					<div class="quote_block float_left">
@@ -77,9 +60,9 @@
 
 		<section id="front_about">
 			<div class="content clearfix">
-				<img src="" alt="CML Portrait" class="portrait block center_block">
+				<img src="file:///Users/james/Documents/Web/206tutoring/images/cml_portrait.png" alt="CML Portrait" class="portrait block center_block">
 					<div class="about_block float_left">
-						<p>Hello! My name is Chris Morris-Lent. I'm an experienced...</p>
+						<p>Hello! My name is Chris Morris-Lent. I'm an experienced private tutor and music teacher in and around Seattle, with emphases in classical piano and standardized-test preparation. I'm an experienced private tutor and music teacher in and around Seattle, with emphases in classical piano and standardized-test preparation.</p>
 						<p>I give group and individual lessons either at my home or the location of your choice!</p>
 						<p>I would like to share my entusiasm for music and knowledge with you or your child!</p>
 					</div>
@@ -127,13 +110,9 @@
 			</div><!-- END DIV content -->
 		</footer>
 	</div>
-<!--
-	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script type="text/javascript" src="file:///Users/james/Documents/Web/206tutoring/slick/slick.min.js"></script>
-	  <script>
-    $(document).ready(function(){
-      $('.slick-slider').slick();
-    }); 
-  </script> -->
+
+  <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.3.8/slick.min.js"></script>
+  <script src="file:///Users/james/Documents/Web/206tutoring/slick/slick-settings.js"></script>
+
 </body>

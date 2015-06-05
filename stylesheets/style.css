@@ -18,7 +18,7 @@ html {
 }
 html, body {
 	height: 	 100%;
-  font-size: 100%;
+  font-size: 75%;
 }
 h1, h2, h3, h4, h5, h6 {margin-bottom: 10px;}
 h1 {font-size: 2em;}
@@ -121,14 +121,13 @@ a.btn_orange,
        -o-box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
           box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
 }
-a.btn-orange:hover,
-.btn-orange:hover {
-  color: #000000;
-  -webkit-box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
-     -moz-box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
-      -ms-box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
-       -o-box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
-          box-shadow: 0px 0px 10px rgba(138,173,53,0.5), 0px 0px 1px rgba(138,173,53,1);
+a.btn_orange:hover,
+.btn_orange:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(255,255,255,0.5), 0px 0px 1px rgba(255,255,255,1);
+     -moz-box-shadow: 0px 0px 10px rgba(255,255,255,0.5), 0px 0px 1px rgba(255,255,255,1);
+      -ms-box-shadow: 0px 0px 10px rgba(255,255,255,0.5), 0px 0px 1px rgba(255,255,255,1);
+       -o-box-shadow: 0px 0px 10px rgba(255,255,255,0.5), 0px 0px 1px rgba(255,255,255,1);
+          box-shadow: 0px 0px 10px rgba(255,255,255,0.5), 0px 0px 1px rgba(255,255,255,1);
 }
 /* SLICK SLIDER
 ========================= */
@@ -145,9 +144,6 @@ a.btn-orange:hover,
   height: 100%;
 }
 .slick_absolute {position: absolute; z-index: 1; top:0; left:0; right: 0;}
-
-/* GENERAL STYLE
-========================= */
 
 /* GRID SYSTEM
 ========================= */
@@ -193,13 +189,8 @@ a.btn-orange:hover,
   clear: both;
 }
 
-.floated {
-	/* These two lines prevent collapsing of container when only floats inside */ 
-	overflow:	auto; 
-	width:		100%;
-}
-.read_more {clear: both;}
-
+/* GENERAL STYLE
+========================= */
 .paragraph {}
 
 /* Typography */
@@ -209,6 +200,7 @@ a.btn-orange:hover,
 .italic 		{font-style: italic;}
 .underline 	{text-decoration: underline;}
 .justify 		{text-align: justify;}
+.black      {color: black;}
 
 /* Display */
 .block 				{display: block;}

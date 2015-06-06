@@ -6,6 +6,9 @@
 */
 
 /* TODO:
+**  Zooming in causes header text to bleed out of section. Because header section is set to stagnant height at the moment.
+**
+**
 */
 
 /* HTML Elements 
@@ -19,6 +22,7 @@ html {
 html, body {
 	height: 	 100%;
   font-size: 75%;
+  font-weight: 400;
 }
 h1, h2, h3, h4, h5, h6 {margin-bottom: 10px;}
 h1 {font-size: 2em;}
@@ -64,13 +68,16 @@ nav {
 }
 nav ul {} /* needs width to center */
 nav li {display: inline; padding: 0 15px;}
-a.nav_link {color: white;}
+a.nav_link {color: white; font-weight: bold;}
+a.nav_link:hover {color: red;}
 
 /* Sections
 ========================= */
 section {padding: 25px 0;}
-#header {height: 300px;} /* same as .slick-slider */
-#header_text {clear: both;}
+#header {height: 300px;  background-color: #969696;} /* same as .slick-slider */
+#header_text h1 {font-size: 4em;}
+#header_text h2 {font-size: 3em; font-weight: 100;}
+
 #front_quote {
 	text-align: center;
 }
@@ -144,6 +151,7 @@ a.btn_orange:hover,
   height: 100%;
 }
 .slick_absolute {position: absolute; z-index: 1; top:0; left:0; right: 0;}
+.slick-prev, .slick-next {z-index: 1051;}
 
 /* GRID SYSTEM
 ========================= */
@@ -158,13 +166,13 @@ a.btn_orange:hover,
 .row:after {
   content: "";
   display: table;
-  clear: both;
+  clear:   both;
 }
 .unit {
   overflow: hidden;
-  padding: 5px 30px;
+  padding: 5px 5%;
 }
-/* append to unit */
+/* follows unit */
 .push   {float: right;}
 .pull   {float: left;}
 .center {text-align: center;}
@@ -172,15 +180,9 @@ a.btn_orange:hover,
   float: none;
   width: auto;
 }
-.full_width     {width: 100%;}
-.half_width     {width: 50%;}
-.third_width    {width: 33.333%;}
-.quarter_width  {width: 25%;}
-.fifth_width    {width: 20%;}
-
 .full_row {
-  zoom: 1;
-  width: 100%;
+  zoom:   1;
+  width:  100%;
   margin: 0px auto;
 }
 .full_row:after {
@@ -189,10 +191,40 @@ a.btn_orange:hover,
   clear: both;
 }
 
+/* MEDIA QUERIES 
+========================= */
+/* Mobile first. Using relative units */
+@media screen and (min-width: 28.75em){
+  .full_width,
+  .half_width,
+  .third_width,
+  .quarter_width,
+  .fifth_width {width: 100%;}
+}
+@media screen and (min-width: 40.5em){
+  .full_width     {width: 100%;}
+  .half_width,
+  .third_width,
+  .quarter_width,
+  .fifth_width    {width: 50%;}
+  /* center the odd unit that falls to next line */
+}
+@media screen and (min-width: 64em){
+  .full_width     {width: 100%;}
+  .half_width     {width: 50%;}
+  .third_width    {width: 33.333%;}
+  .quarter_width  {width: 25%;}
+  .fifth_width    {width: 20%;}
+}
+@media screen and (min-width: 80em){
+  .full_width     {width: 100%;}
+  .half_width     {width: 50%;}
+  .third_width    {width: 33.333%;}
+  .quarter_width  {width: 25%;}
+  .fifth_width    {width: 20%;}
+}
 /* GENERAL STYLE
 ========================= */
-.paragraph {}
-
 /* Typography */
 .uppercase 	{text-transform: uppercase;}
 .capitalize {text-transform: capitalize;}
@@ -201,24 +233,20 @@ a.btn_orange:hover,
 .underline 	{text-decoration: underline;}
 .justify 		{text-align: justify;}
 .black      {color: black;}
-
 /* Display */
 .block 				{display: block;}
 .inline 			{display: inline;}
 .inline_block {display: inline-block;}
-
 
 /* Position*/
 .static 	{position: static;}
 .relative {position: relative;}
 .absolute {position: absolute;}
 .fixed 		{position: fixed;}
-
 /* Alignment */
 .float_right 	{float: right;}
 .float_left 	{float: left;}
 .center_text 	{text-align: center;}
 .center_block {margin: 0px auto;}
-
-.top_right 	{position: absolute; top:0; right:0;}
-.top_left 	{position: absolute; top:0;}
+.top_right 	  {position: absolute; top:0; right:0;}
+.top_left     {position: absolute; top:0;}

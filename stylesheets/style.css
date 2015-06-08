@@ -58,7 +58,6 @@ nav {
 	color: white;
 	position: relative;
   top: 0;
-
 	z-index: 1050;
 }
 /* will probably turn this to img */
@@ -71,6 +70,17 @@ nav li {display: inline; padding: 0 15px;}
 a.nav_link {color: white; font-weight: bold;}
 a.nav_link:hover {color: red;}
 
+#mobile_nav {
+  display: hidden;
+  float: right;
+  width: 40px;
+  height: 40px;
+  background: black url() center;
+}
+  a:hover#mobile_nav {
+  background-color: #444;
+  border-radius: 4px 4px 0 0;
+}
 /* Sections
 ========================= */
 section {padding: 25px 0;}
@@ -199,7 +209,9 @@ a.btn_orange:hover,
   .half_width,
   .third_width,
   .quarter_width,
-  .fifth_width {width: 100%;}
+  .fifth_width    {width: 100%;}
+  #mobile_nav {display: inline-block;}
+  #nav {display: none;}
 }
 @media screen and (min-width: 40.5em){
   .full_width     {width: 100%;}
@@ -208,6 +220,9 @@ a.btn_orange:hover,
   .quarter_width,
   .fifth_width    {width: 50%;}
   /* center the odd unit that falls to next line */
+  .last.third_width {clear:both; width:50%; margin: 0 auto;}
+  #mobile_nav {display: none;}
+  #nav {display: block;}
 }
 @media screen and (min-width: 64em){
   .full_width     {width: 100%;}
@@ -215,6 +230,9 @@ a.btn_orange:hover,
   .third_width    {width: 33.333%;}
   .quarter_width  {width: 25%;}
   .fifth_width    {width: 20%;}
+  .last.third_width {clear:none; width: 33.333%;}
+  #mobile_nav {display: none;}
+  #nav {display: block;}
 }
 @media screen and (min-width: 80em){
   .full_width     {width: 100%;}
@@ -222,6 +240,9 @@ a.btn_orange:hover,
   .third_width    {width: 33.333%;}
   .quarter_width  {width: 25%;}
   .fifth_width    {width: 20%;}
+  .last.third_width {clear:none; width: 33.333%;}
+  #mobile_nav {display: none;}
+  #nav {display: block;}
 }
 /* GENERAL STYLE
 ========================= */

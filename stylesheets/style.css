@@ -11,20 +11,31 @@
 **
 */
 
-/* HTML Elements 
-========================= */
+/* BLOKK font for templating */
+@font-face {
+    font-family: 'BLOKKNeue-Regular';
+    src: url('file:///Users/james/Documents/Web/BLOKK_BLOKKNeue/BLOKKNeue-Regular/webfonts/BLOKKNeue-Regular.eot');
+    src: url('file:///Users/james/Documents/Web/BLOKK_BLOKKNeue/BLOKKNeue-Regular/webfonts/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'),
+         url('file:///Users/james/Documents/Web/BLOKK_BLOKKNeue/BLOKKNeue-Regular/webfonts/BLOKKNeue-Regular.woff') format('woff'),
+         url('file:///Users/james/Documents/Web/BLOKK_BLOKKNeue/BLOKKNeue-Regular/webfonts/BLOKKNeue-Regular.svg#BLOKKNeue-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* GENERAL HTML Element styling
+================================================== */
+/* Typography */
 html { 
-  font-family: 			sans-serif;
   background-color: #F5F5F5;
   font-size: 				16px;
-  font-family: 			"Open Sans", Helvetica, Arial, Sans-Serif;
+  font-family: 			Sans-Serif, Helvetica, Arial, "Open Sans";
 }
 html, body {
 	height: 	 100%;
   font-size: 75%;
   font-weight: 400;
 }
-h1, h2, h3, h4, h5, h6 {margin-bottom: 10px;}
+h1, h2, h3, h4, h5, h6 {font-weight: 600; margin-bottom: 10px;}
 h1 {font-size: 2em;}
 h2 {font-size: 1.5em;}
 h3 {font-size: 1.125em;}
@@ -32,13 +43,14 @@ h4 {font-size: 1em;} /* Same size as paragraph */
 h5 {font-size: .875em;}
 h6 {font-size: .75em;}
 p {
+  font-family: "BLOKKNeue-Regular", Sans-Serif; /* change font to something normal */
 	font-size: 		1em;
   line-height: 	1.375em;
   margin-bottom: 25px;
 }
 
 /* Links
-========================= */
+================================================== */
 a,
 a:link,
 a:visited,
@@ -47,13 +59,16 @@ a:hover {
   color: 	#167CEF; /* blue */
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition:    all .3s ease-out;
+  -o-transition:      all .3s ease-out;
+  transition:         all .3s ease-out;
 }
 a:hover {
-  color: red;
+  color: #FB8A2A; /* orange */
 }
-/* UNIQUE PAGE CONTENT
-========================= */
+/* NAVIGATION
+================================================== */
 nav {
 	color: white;
 	position: relative;
@@ -65,29 +80,22 @@ nav {
 	font-size: 2em;
 	color: 		 white;
 }
-nav ul {} /* needs width to center */
-nav li {display: inline; padding: 0 15px;}
+nav li {
+  font-size: 1.25em;
+  display: inline;
+  padding: 0 15px;
+}
 a.nav_link {color: white; font-weight: bold;}
-a.nav_link:hover {color: red;}
+a.nav_link:hover {color: #FB8A2A;} /* orange */
 
-#mobile_nav {
-  display: hidden;
-  float: right;
-  width: 40px;
-  height: 40px;
-  background: black url() center;
-}
-  a:hover#mobile_nav {
-  background-color: #444;
-  border-radius: 4px 4px 0 0;
-}
-/* Sections
-========================= */
-section {padding: 25px 0;}
-#header {height: 300px;  background-color: #969696;} /* same as .slick-slider */
+/* SECTIONS
+================================================== */
+section, header {padding: 25px 0;}
+header {height: 300px;  background-color: #969696;} /* same as .slick-slider */
+#header_text {margin: 50px 0;}
 #header_text h1 {font-size: 4em;}
 #header_text h2 {font-size: 3em; font-weight: 100;}
-
+#header_text a {margin: 20px 0;}
 #front_quote {
 	text-align: center;
 }
@@ -101,22 +109,16 @@ section {padding: 25px 0;}
 	height: 100px;
 }
 .about_block {width: 45%;}
-#services li {display: inline;}
-
-
-/* Footer
-========================= */
+#services ul {margin: 5px;}
+#services li {display: inline-block; padding: 0 5px;}
+/* FOOTER
+================================================== */
 footer {
-	position: relative;
-  right: 	0;
-  bottom: 0;
-  left: 	0;
 	background-color: #040404;
 	color: 						white;
 }
-
-/* Buttons
-========================= */
+/* BUTTONS
+================================================== */
 a.btn_orange,
 .btn_orange	 {
 	padding: 5px 15px;
@@ -147,7 +149,7 @@ a.btn_orange:hover,
           box-shadow: 0px 0px 10px rgba(255,255,255,0.5), 0px 0px 1px rgba(255,255,255,1);
 }
 /* SLICK SLIDER
-========================= */
+================================================== */
 .a-slide{
   height: 100%;
   width: 	100%;
@@ -161,68 +163,74 @@ a.btn_orange:hover,
   height: 100%;
 }
 .slick_absolute {position: absolute; z-index: 1; top:0; left:0; right: 0;}
-.slick-prev, .slick-next {z-index: 1051;}
+.slick-prev, .slick-next {z-index: 1051!important;}
 
 /* GRID SYSTEM
-========================= */
-/* wraps the content in sections to keep centered on page*/
-.content {zoom: 1; max-width: 1080px; margin: 0 auto;}
-
+================================================== */
+/* Row
+------------------------- */
+/* Makes row on page centered of specified width */
 .row {
   zoom: 1;
   max-width: 1080px;
   margin: 0px auto;
 }
-.row:after {
+/* row that takes full width of page */
+.full_row {
+  zoom:   1;
+  width:  100%;
+  padding: 0 2%;
+  margin: 0px auto;
+}
+/* Row clearing
+------------------------- */
+.row:before, .full_row:before {
+  content: "";
+  display: table;
+}
+.row:after, .full_row:after {
   content: "";
   display: table;
   clear:   both;
 }
-.unit {
-  overflow: hidden;
+/* Column
+------------------------- */
+.full_width,
+.half_width,
+.third_width,
+.quarter_width,
+.fifth_width {
+  float: left;
   padding: 5px 5%;
+  margin: 0;
+  overflow: hidden;
 }
-/* follows unit */
+/* descriptor for column */
 .push   {float: right;}
 .pull   {float: left;}
-.center {text-align: center;}
-.last {
-  float: none;
-  width: auto;
-}
-.full_row {
-  zoom:   1;
-  width:  100%;
-  margin: 0px auto;
-}
-.full_row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+.first  {clear: both;}
+.last   {float: none; width: auto;}
+
 
 /* MEDIA QUERIES 
 ========================= */
 /* Mobile first. Using relative units */
-@media screen and (min-width: 28.75em){
+/*28.75em*/
+@media screen and (min-width: 0em) and (max-width: 40.4em){
   .full_width,
   .half_width,
   .third_width,
   .quarter_width,
   .fifth_width    {width: 100%;}
-  #mobile_nav {display: inline-block;}
-  #nav {display: none;}
 }
-@media screen and (min-width: 40.5em){
+@media screen and (min-width: 40.5em) and (max-width: 63.9em){
   .full_width     {width: 100%;}
   .half_width,
   .third_width,
   .quarter_width,
   .fifth_width    {width: 50%;}
-  /* center the odd unit that falls to next line */
+  /* because two units per line center the odd man out */
   .last.third_width {clear:both; width:50%; margin: 0 auto;}
-  #mobile_nav {display: none;}
-  #nav {display: block;}
 }
 @media screen and (min-width: 64em){
   .full_width     {width: 100%;}
@@ -231,9 +239,10 @@ a.btn_orange:hover,
   .quarter_width  {width: 25%;}
   .fifth_width    {width: 20%;}
   .last.third_width {clear:none; width: 33.333%;}
-  #mobile_nav {display: none;}
-  #nav {display: block;}
+
 }
+/* This doesnt do anything at the moment */
+/*
 @media screen and (min-width: 80em){
   .full_width     {width: 100%;}
   .half_width     {width: 50%;}
@@ -244,6 +253,7 @@ a.btn_orange:hover,
   #mobile_nav {display: none;}
   #nav {display: block;}
 }
+*/
 /* GENERAL STYLE
 ========================= */
 /* Typography */
@@ -253,7 +263,8 @@ a.btn_orange:hover,
 .italic 		{font-style: italic;}
 .underline 	{text-decoration: underline;}
 .justify 		{text-align: justify;}
-.black      {color: black;}
+.white      {color: #FFF;}
+.black      {color: #000;}
 /* Display */
 .block 				{display: block;}
 .inline 			{display: inline;}
@@ -265,9 +276,5 @@ a.btn_orange:hover,
 .absolute {position: absolute;}
 .fixed 		{position: fixed;}
 /* Alignment */
-.float_right 	{float: right;}
-.float_left 	{float: left;}
-.center_text 	{text-align: center;}
+.center_align {text-align: center;}
 .center_block {margin: 0px auto;}
-.top_right 	  {position: absolute; top:0; right:0;}
-.top_left     {position: absolute; top:0;}

@@ -1,15 +1,16 @@
-/* 
+/* --------------------------------------------------
 ** style.css
 ** Stylesheet for www.206tutoring.com
 ** Author: James Hoover (jamesfhoover@gmail.com)
 ** Copyright: 2015
-*/
+** -------------------------------------------------- */
 
 /* TODO:
+--------------------------------------------------
+**
 **  Zooming in causes header text to bleed out of section. Because header section is set to stagnant height at the moment.
 **
-**
-*/
+-------------------------------------------------- */
 
 /* BLOKK font for templating */
 @font-face {
@@ -22,9 +23,10 @@
     font-style: normal;
 }
 
-/* GENERAL HTML Element styling
+/* $HTML ELEMENTS
 ================================================== */
-/* Typography */
+/* Typography
+------------------------- */
 html { 
   background-color: #F5F5F5;
   font-size: 				16px;
@@ -42,15 +44,14 @@ h3 {font-size: 1.125em;}
 h4 {font-size: 1em;} /* Same size as paragraph */
 h5 {font-size: .875em;}
 h6 {font-size: .75em;}
-p {
-  font-family: "BLOKKNeue-Regular", Sans-Serif; /* change font to something normal */
+p, blockquote {
+  font-family: Sans-Serif; /* change font to something normal */
 	font-size: 		1em;
   line-height: 	1.375em;
   margin-bottom: 25px;
 }
-
 /* Links
-================================================== */
+------------------------- */
 a,
 a:link,
 a:visited,
@@ -67,16 +68,12 @@ a:hover {
 a:hover {
   color: #FB8A2A; /* orange */
 }
-/* NAVIGATION
+/* $NAVIGATION
 ================================================== */
-nav {
-	color: white;
-	position: relative;
-  top: 0;
-	z-index: 1050;
-}
+nav {}
 /* will probably turn this to img */
-#nav_logo {
+.nav-logo {
+  display:   inline-block;
 	font-size: 2em;
 	color: 		 white;
 }
@@ -85,48 +82,55 @@ nav li {
   display: inline;
   padding: 0 15px;
 }
-a.nav_link {color: white; font-weight: bold;}
-a.nav_link:hover {color: #FB8A2A;} /* orange */
+a.nav-link {color: white; font-weight: bold;}
+a.nav-link:hover {color: #FB8A2A;} /* orange */
 
-/* SECTIONS
+/* $SECTIONS
 ================================================== */
-section, header {padding: 25px 0;}
-header {height: 300px;  background-color: #969696;} /* same as .slick-slider */
-#header_text {margin: 50px 0;}
-#header_text h1 {font-size: 4em;}
-#header_text h2 {font-size: 3em; font-weight: 100;}
-#header_text a {margin: 20px 0;}
-#front_quote {
+header, section, footer {padding: 25px 0;}
+header {
+  position: relative;
+  top: 0;
+  color: white;
+  background-color: #969696;
+  z-index: 1050;
+}
+.welcome {z-index: 1050;}
+.header-text {margin: 50px 0;}
+.header-text h1 {font-size: 4em;}
+.header-text h2 {font-size: 3em; font-weight: 100;}
+.header-text a {margin: 20px 0;}
+.main-quote {
 	text-align: center;
 }
-.quote_block {
+.quote-block {
 	display: 	inline-block;
 	width: 		30%;
 }
-#front_about {background-color: white;}
+.front-about {background-color: white;}
 .portrait {
 	width: 	100px;
 	height: 100px;
 }
-.about_block {width: 45%;}
-#services ul {margin: 5px;}
-#services li {display: inline-block; padding: 0 5px;}
-/* FOOTER
-================================================== */
+.about-block {width: 45%;}
+.services ul {margin: 5px;}
+.services li {display: inline-block; padding: 0 5px;}
+/* Footer
+------------------------- */
 footer {
 	background-color: #040404;
 	color: 						white;
 }
-/* BUTTONS
+/* $BUTTONS
 ================================================== */
-a.btn_orange,
-.btn_orange	 {
+a.btn-orange,
+.btn-orange	 {
 	padding: 5px 15px;
 	color: white;
 	background-color: #FB8A2A; /* orange */
 	display: inline-block;
   padding: 8px 30px;
-  margin: 5px 0px;
+  margin: 5px 0;
   text-shadow: none;
   color: #FFFFFF;
   font-size: 1em !important;
@@ -134,38 +138,21 @@ a.btn_orange,
   text-transform: uppercase;
   border-radius: 2px;
   cursor: pointer;
-  -webkit-box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
-     -moz-box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
-      -ms-box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
-       -o-box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
-          box-shadow: 0px 2px 2px rgba(0,0,0,0.1), 0px 0px 1px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 2px 2px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.3);
+     -moz-box-shadow: 0 2px 2px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.3);
+      -ms-box-shadow: 0 2px 2px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.3);
+       -o-box-shadow: 0 2px 2px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.3);
+          box-shadow: 0 2px 2px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.3);
 }
-a.btn_orange:hover,
-.btn_orange:hover {
-  -webkit-box-shadow: 0px 0px 10px rgba(255,255,255,0.5), 0px 0px 1px rgba(255,255,255,1);
-     -moz-box-shadow: 0px 0px 10px rgba(255,255,255,0.5), 0px 0px 1px rgba(255,255,255,1);
-      -ms-box-shadow: 0px 0px 10px rgba(255,255,255,0.5), 0px 0px 1px rgba(255,255,255,1);
-       -o-box-shadow: 0px 0px 10px rgba(255,255,255,0.5), 0px 0px 1px rgba(255,255,255,1);
-          box-shadow: 0px 0px 10px rgba(255,255,255,0.5), 0px 0px 1px rgba(255,255,255,1);
+a.btn-orange:hover,
+.btn-orange:hover {
+  -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
+     -moz-box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
+      -ms-box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
+       -o-box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
+          box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
 }
-/* SLICK SLIDER
-================================================== */
-.a-slide{
-  height: 100%;
-  width: 	100%;
-  background-size: cover !important;
-}
-.slick-slider{
-  height: 300px;
-}
-.slick-list,
-.slick-track {
-  height: 100%;
-}
-.slick_absolute {position: absolute; z-index: 1; top:0; left:0; right: 0;}
-.slick-prev, .slick-next {z-index: 1051!important;}
-
-/* GRID SYSTEM
+/* $GRID SYSTEM
 ================================================== */
 /* Row
 ------------------------- */
@@ -173,94 +160,97 @@ a.btn_orange:hover,
 .row {
   zoom: 1;
   max-width: 1080px;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 /* row that takes full width of page */
-.full_row {
+.full-row {
   zoom:   1;
   width:  100%;
   padding: 0 2%;
-  margin: 0px auto;
+  margin: 0 auto;
 }
-/* Row clearing
+/* Row Clearing
 ------------------------- */
-.row:before, .full_row:before {
+.row:before, .full-row:before {
   content: "";
   display: table;
 }
-.row:after, .full_row:after {
+.row:after, .full-row:after {
   content: "";
   display: table;
   clear:   both;
 }
 /* Column
 ------------------------- */
-.full_width,
-.half_width,
-.third_width,
-.quarter_width,
-.fifth_width {
+.full-width,
+.half-width,
+.third-width,
+.quarter-width,
+.fifth-width {
   float: left;
   padding: 5px 5%;
   margin: 0;
   overflow: hidden;
 }
-/* descriptor for column */
+/* Descriptor for column */
 .push   {float: right;}
 .pull   {float: left;}
+/* Append to first/last column */
 .first  {clear: both;}
 .last   {float: none; width: auto;}
 
-
-/* MEDIA QUERIES 
+/* $MEDIA QUERIES 
 ========================= */
 /* Mobile first. Using relative units */
 /*28.75em*/
-@media screen and (min-width: 0em) and (max-width: 40.4em){
-  .full_width,
-  .half_width,
-  .third_width,
-  .quarter_width,
-  .fifth_width    {width: 100%;}
+@media screen and (min-width: 0) and (max-width: 40.4em){
+  .full-width,
+  .half-width,
+  .third-width,
+  .quarter-width,
+  .fifth-width    {width: 100%;}
 }
 @media screen and (min-width: 40.5em) and (max-width: 63.9em){
-  .full_width     {width: 100%;}
-  .half_width,
-  .third_width,
-  .quarter_width,
-  .fifth_width    {width: 50%;}
-  /* because two units per line center the odd man out */
-  .last.third_width {clear:both; width:50%; margin: 0 auto;}
+  .full-width     {width: 100%;}
+  .half-width,
+  .third-width,
+  .quarter-width,
+  .fifth-width    {width: 50%;}
+  /* 50% width causes two units per line so center the last odd unit */
+  .last.third-width, .last.fifth-width {clear:both; width:50%; margin: 0 auto;}
 }
 @media screen and (min-width: 64em){
-  .full_width     {width: 100%;}
-  .half_width     {width: 50%;}
-  .third_width    {width: 33.333%;}
-  .quarter_width  {width: 25%;}
-  .fifth_width    {width: 20%;}
-  .last.third_width {clear:none; width: 33.333%;}
+  .full-width     {width: 100%;}
+  .half-width     {width: 50%;}
+  .third-width    {width: 33.333%;}
+  .quarter-width  {width: 25%;}
+  .fifth-width    {width: 20%;}
+  .last.third-width {clear:none; width: 33.333%;}
+  .last.fifth-width {clear:none; width: 20%;}
+}
 
+/* $SLICK SLIDER
+================================================== */
+.a-slide{
+  height: 100%;
+  width:  100%;
+  background-size: cover !important;
 }
-/* This doesnt do anything at the moment */
-/*
-@media screen and (min-width: 80em){
-  .full_width     {width: 100%;}
-  .half_width     {width: 50%;}
-  .third_width    {width: 33.333%;}
-  .quarter_width  {width: 25%;}
-  .fifth_width    {width: 20%;}
-  .last.third_width {clear:none; width: 33.333%;}
-  #mobile_nav {display: none;}
-  #nav {display: block;}
+.slick-slider{}
+.slick-list,
+.slick-track {
+  height: 100%;
 }
-*/
-/* GENERAL STYLE
+.slick-absolute {position: absolute; z-index: 1; top:0; left:0; right: 0;}
+.slick-prev, .slick-next {z-index: 1051!important;}
+
+/* $GENERAL
 ========================= */
-/* Typography */
+/* Text */
+.bold       {font-weight: bold;}
+.italic     {font-style: italic;}
 .uppercase 	{text-transform: uppercase;}
 .capitalize {text-transform: capitalize;}
-.bold 			{font-weight: bold;}
-.italic 		{font-style: italic;}
 .underline 	{text-decoration: underline;}
 .justify 		{text-align: justify;}
 .white      {color: #FFF;}
@@ -268,13 +258,12 @@ a.btn_orange:hover,
 /* Display */
 .block 				{display: block;}
 .inline 			{display: inline;}
-.inline_block {display: inline-block;}
-
+.inline-block {display: inline-block;}
 /* Position*/
 .static 	{position: static;}
 .relative {position: relative;}
 .absolute {position: absolute;}
 .fixed 		{position: fixed;}
 /* Alignment */
-.center_align {text-align: center;}
-.center_block {margin: 0px auto;}
+.center-align {text-align: center;}
+.center-block {margin: 0 auto;}

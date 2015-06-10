@@ -108,6 +108,7 @@ header {
 	width: 		30%;
 }
 .front-about {background-color: white;}
+.smta-img {width: 150px; height: 40px;}
 .portrait {
 	width: 	100px;
 	height: 100px;
@@ -152,7 +153,7 @@ a.btn-orange:hover,
        -o-box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
           box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
 }
-/* $GRID SYSTEM
+/* $GRID
 ================================================== */
 /* Row
 ------------------------- */
@@ -166,7 +167,6 @@ a.btn-orange:hover,
 .full-row {
   zoom:   1;
   width:  100%;
-  padding: 0 2%;
   margin: 0 auto;
 }
 /* Row Clearing
@@ -182,49 +182,106 @@ a.btn-orange:hover,
 }
 /* Column
 ------------------------- */
-.full-width,
-.half-width,
-.third-width,
-.quarter-width,
-.fifth-width {
+/* Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css */
+.pull, /* float a single object LEFT */
+.one-sixth,
+.one-fifth,
+.one-fourth,
+.one-third,
+.two-sixths,
+.two-fifths,
+.one-half,
+.two-fourths,
+.three-sixths,  
+.three-fifths,  
+.two-thirds,
+.four-sixths,   
+.three-fourths, 
+.four-fifths,   
+.five-sixths {
   float: left;
-  padding: 5px 5%;
-  margin: 0;
-  overflow: hidden;
+  margin-left: 4.1666666666667%;
 }
-/* Descriptor for column */
-.push   {float: right;}
-.pull   {float: left;}
-/* Append to first/last column */
-.first  {clear: both;}
-.last   {float: none; width: auto;}
+.push {float: right;} /* float a single object RIGHT */
+.full-row .push {margin-right:  4.1666666666667%;}
+
+.one-sixth     {width: 13.194444444444%;}
+.one-fifth     {width: 16.666666666667%;}
+.one-fourth    {width: 21.875%;}
+.one-third,
+.two-sixths    {width: 30.555555555556%;}
+.two-fifths    {width: 37.5%;}
+.one-half,
+.two-fourths,
+.three-sixths  {width: 47.916666666667%;}
+.three-fifths  {width: 58.333333333333%;}
+.two-thirds,
+.four-sixths   {width: 65.277777777778%;}
+.three-fourths {width: 73.958333333333%;}
+.four-fifths   {width: 79.166666666667%;}
+.five-sixths   {width: 82.638888888889%;} 
+.first {
+  clear: both;
+  margin-left: 0;
+}
 
 /* $MEDIA QUERIES 
 ========================= */
 /* Mobile first. Using relative units */
 /*28.75em*/
 @media screen and (min-width: 0) and (max-width: 40.4em){
-  .full-width,
-  .half-width,
-  .third-width,
-  .quarter-width,
-  .fifth-width    {width: 100%;}
+  .row {
+    max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .one-sixth,
+  .one-fifth,
+  .one-fourth,
+  .one-third,
+  .two-sixths,
+  .two-fifths,
+  .one-half,
+  .two-fourths,
+  .three-sixths,  
+  .three-fifths,  
+  .two-thirds,
+  .four-sixths,   
+  .three-fourths, 
+  .four-fifths,   
+  .five-sixths {
+    margin: 0;
+    width: 100%
+  }
 }
 @media screen and (min-width: 40.5em) and (max-width: 63.9em){
-  .full-width     {width: 100%;}
-  .half-width,
-  .third-width,
-  .quarter-width,
-  .fifth-width    {width: 50%;}
+  .row {
+    max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .one-sixth,
+  .one-fifth,`
+  .one-fourth,
+  .one-third,
+  .two-sixths,
+  .two-fifths,
+  .one-half,
+  .two-fourths,
+  .three-sixths {width: 47.916666666667%;}
+  .three-fifths,  
+  .two-thirds,
+  .four-sixths,   
+  .three-fourths, 
+  .four-fifths,   
+  .five-sixths  {width: 100%}
+
+
   /* 50% width causes two units per line so center the last odd unit */
   .last.third-width, .last.fifth-width {clear:both; width:50%; margin: 0 auto;}
 }
 @media screen and (min-width: 64em){
-  .full-width     {width: 100%;}
-  .half-width     {width: 50%;}
-  .third-width    {width: 33.333%;}
-  .quarter-width  {width: 25%;}
-  .fifth-width    {width: 20%;}
+
   .last.third-width {clear:none; width: 33.333%;}
   .last.fifth-width {clear:none; width: 20%;}
 }

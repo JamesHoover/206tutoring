@@ -87,7 +87,7 @@ a.nav-link:hover {color: #FB8A2A;} /* orange */
 
 /* $SECTIONS
 ================================================== */
-header, section, footer {padding: 25px 0;}
+main, header, section, footer {padding: 25px 0;}
 header {
   position: relative;
   top: 0;
@@ -95,7 +95,7 @@ header {
   background-color: #969696;
   z-index: 1050;
 }
-.welcome {z-index: 1050;}
+.welcome {background: url(https://siobhancurious.files.wordpress.com/2011/09/try.jpg) no-repeat center center fixed;}
 .header-text {margin: 50px 0;}
 .header-text h1 {font-size: 4em;}
 .header-text h2 {font-size: 3em; font-weight: 100;}
@@ -132,7 +132,6 @@ a.btn-orange,
 	display: inline-block;
   padding: 8px 30px;
   margin: 5px 0;
-  text-shadow: none;
   color: #FFFFFF;
   font-size: 1em !important;
   text-decoration: none;
@@ -276,7 +275,6 @@ a.btn-orange:hover,
   .four-fifths,   
   .five-sixths  {width: 100%}
 
-
   /* 50% width causes two units per line so center the last odd unit */
   .last.third-width, .last.fifth-width {clear:both; width:50%; margin: 0 auto;}
 }
@@ -285,21 +283,6 @@ a.btn-orange:hover,
   .last.third-width {clear:none; width: 33.333%;}
   .last.fifth-width {clear:none; width: 20%;}
 }
-
-/* $SLICK SLIDER
-================================================== */
-.a-slide{
-  height: 100%;
-  width:  100%;
-  background-size: cover !important;
-}
-.slick-slider{}
-.slick-list,
-.slick-track {
-  height: 100%;
-}
-.slick-absolute {position: absolute; z-index: 1; top:0; left:0; right: 0;}
-.slick-prev, .slick-next {z-index: 1051!important;}
 
 /* $GENERAL
 ========================= */

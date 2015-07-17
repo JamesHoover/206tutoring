@@ -8,7 +8,6 @@
 /* TODO:
 --------------------------------------------------
 **
-**  Zooming in causes header text to bleed out of section. Because header section is set to stagnant height at the moment.
 **
 -------------------------------------------------- */
 
@@ -26,7 +25,7 @@ html, body {
   font-size: 90%;
   font-weight: 400;
 }
-h1, h2, h3, h4, h5, h6 {font-weight: 600; margin-bottom: 10px;}
+h1, h2, h3, h4, h5, h6 {font-weight: 100;}
 h1 {font-size: 2em;}
 h2 {font-size: 1.5em;}
 h3 {font-size: 1.125em;}
@@ -36,7 +35,7 @@ h6 {font-size: .75em;}
 p, blockquote {
   font-family: Sans-Serif; /* change font to something normal */
 	font-size: 		1em;
-  line-height: 	1.375em;
+  line-height: 	1.75em;
   margin-bottom: 25px;
 }
 /* Links
@@ -59,7 +58,8 @@ a:hover {
 }
 /* $NAVIGATION
 ================================================== */
-nav {text-align: center;}
+.top-nav {padding: 15px 0 100px;}
+nav {padding-top: 10px; text-align: center;}
 /* will probably turn this to img */
 .nav-logo {
   display: inline-block;
@@ -76,8 +76,11 @@ a.nav-link:hover {color: #FB8A2A;} /* orange */
 
 /* $SECTIONS
 ================================================== */
-.section-title {text-align: center;}
-.read-more {}
+.section-title {
+  text-align: center;
+  padding: 30px 0 25px;
+}
+.read-more {padding-top: 25px;}
 /* $Header */
 header {
   color: white;
@@ -89,32 +92,39 @@ header {
 
 }
 .header-text {padding: 25px 0; text-align: center;}
-.header-text h1 {font-size: 4em;}
-.header-text h2 {font-size: 3em; font-weight: 100;}
-.header-text a  {margin: 20px 0;}
+.header-text h1 {font-size: 3.5em;}
+.header-text h2 {font-size: 2.5em; font-weight: 100; padding-bottom: 40px;}
+.header-text h4 {padding: 15px 0 25px;}
+
 /* $Quotes */
 .quotes {
 	text-align: center;
+  padding: 30px 0;
 }
+.quotes h4 {font-weight: bold;}
 .quote-block {
 	display: 	inline-block;
 	width: 		30%;
 }
 /* $About */
-.about {background-color: white;}
+.about {background-color: white; padding: 30px;}
 .smta-img {width: 150px; height: 40px;}
-.about-portrait {text-align: center;}
+.about-portrait {text-align: center; padding-bottom: 25px;}
 .about-portrait img {
 	width: 	100px;
 	height: 100px;
 }
+.about-credentials h4 {font-weight: bold; padding-bottom: 5px;}
 /* $Services */
+.services {padding-bottom: 30px;}
 .service-icons {text-align: center;}
 .services ul {margin: 5px;}
 .services li {display: inline-block; padding: 0 5px;}
+.more {background: #000;}
 /* $Footer
 ------------------------- */
 footer {
+  padding: 30px 0;
 	background-color: #040404;
 	color: white;
 }

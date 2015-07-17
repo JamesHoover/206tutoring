@@ -12,17 +12,6 @@
 **
 -------------------------------------------------- */
 
-/* BLOKK font for templating */
-@font-face {
-    font-family: 'BLOKKNeue-Regular';
-    src: url('file:///Users/james/Documents/Web/BLOKK_BLOKKNeue/BLOKKNeue-Regular/webfonts/BLOKKNeue-Regular.eot');
-    src: url('file:///Users/james/Documents/Web/BLOKK_BLOKKNeue/BLOKKNeue-Regular/webfonts/BLOKKNeue-Regular.eot?#iefix') format('embedded-opentype'),
-         url('file:///Users/james/Documents/Web/BLOKK_BLOKKNeue/BLOKKNeue-Regular/webfonts/BLOKKNeue-Regular.woff') format('woff'),
-         url('file:///Users/james/Documents/Web/BLOKK_BLOKKNeue/BLOKKNeue-Regular/webfonts/BLOKKNeue-Regular.svg#BLOKKNeue-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* $HTML ELEMENTS
 ================================================== */
 /* Typography
@@ -34,7 +23,7 @@ html {
 }
 html, body {
 	height: 	 100%;
-  font-size: 75%;
+  font-size: 90%;
   font-weight: 400;
 }
 h1, h2, h3, h4, h5, h6 {font-weight: 600; margin-bottom: 10px;}
@@ -70,13 +59,13 @@ a:hover {
 }
 /* $NAVIGATION
 ================================================== */
-nav {}
+nav {text-align: center;}
 /* will probably turn this to img */
 .nav-logo {
-  display:   inline-block;
+  display: inline-block;
 	font-size: 2em;
-	color: 		 white;
 }
+a.nav-logo {color: #fff;}
 nav li {
   font-size: 1.25em;
   display: inline;
@@ -87,41 +76,49 @@ a.nav-link:hover {color: #FB8A2A;} /* orange */
 
 /* $SECTIONS
 ================================================== */
-main, header, section, footer {padding: 25px 0;}
+.section-title {text-align: center;}
+.read-more {}
+/* $Header */
 header {
-  position: relative;
-  top: 0;
   color: white;
-  background-color: #969696;
-  z-index: 1050;
+  background: url(file:///Users/james/Documents/Web/206tutoring/images/home-cover3.jpg) no-repeat;
+  -webkit-background-size:  100% 100%;
+  -moz-background-size:     100% 100%;
+  -o-background-size:       100% 100%;
+  background-size:          100% 100%;
+
 }
-.welcome {background: url(https://siobhancurious.files.wordpress.com/2011/09/try.jpg) no-repeat center center fixed;}
-.header-text {margin: 50px 0;}
+.header-text {padding: 25px 0; text-align: center;}
 .header-text h1 {font-size: 4em;}
 .header-text h2 {font-size: 3em; font-weight: 100;}
-.header-text a {margin: 20px 0;}
-.main-quote {
+.header-text a  {margin: 20px 0;}
+/* $Quotes */
+.quotes {
 	text-align: center;
 }
 .quote-block {
 	display: 	inline-block;
 	width: 		30%;
 }
-.front-about {background-color: white;}
+/* $About */
+.about {background-color: white;}
 .smta-img {width: 150px; height: 40px;}
-.portrait {
+.about-portrait {text-align: center;}
+.about-portrait img {
 	width: 	100px;
 	height: 100px;
 }
-.about-block {width: 45%;}
+/* $Services */
+.service-icons {text-align: center;}
 .services ul {margin: 5px;}
 .services li {display: inline-block; padding: 0 5px;}
-/* Footer
+/* $Footer
 ------------------------- */
 footer {
 	background-color: #040404;
-	color: 						white;
+	color: white;
 }
+.footer-logo h2 {font-weight: bold;}
 /* $BUTTONS
 ================================================== */
 a.btn-orange,
@@ -164,7 +161,7 @@ a.btn-orange:hover,
 }
 /* row that takes full width of page */
 .full-row {
-  zoom:   1;
+  zoom: 1;
   width:  100%;
   margin: 0 auto;
 }
@@ -229,6 +226,7 @@ a.btn-orange:hover,
 /* Mobile first. Using relative units */
 /*28.75em*/
 @media screen and (min-width: 0) and (max-width: 40.4em){
+  a.nav-btn {display: none;}
   .row {
     max-width: 100%;
     padding-left: 5%;
@@ -279,7 +277,6 @@ a.btn-orange:hover,
   .last.third-width, .last.fifth-width {clear:both; width:50%; margin: 0 auto;}
 }
 @media screen and (min-width: 64em){
-
   .last.third-width {clear:none; width: 33.333%;}
   .last.fifth-width {clear:none; width: 20%;}
 }

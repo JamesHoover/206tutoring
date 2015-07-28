@@ -17,13 +17,12 @@
 ------------------------- */
 html { 
   background-color: #F5F5F5;
-  font-size: 				16px;
-  font-family: 			Sans-Serif, Helvetica, Arial, "Open Sans";
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
 }
 html, body {
 	height: 	 100%;
   font-size: 90%;
-  font-weight: 400;
 }
 h1, h2, h3, h4, h5, h6 {font-weight: 100;}
 h1 {font-size: 2em;}
@@ -71,7 +70,7 @@ nav li {
   display: inline;
   padding: 0 15px;
 }
-a.nav-link {color: white; font-weight: bold;}
+a.nav-link {color: white; font-weight: 900;}
 a.nav-link:hover {color: #FB8A2A;} /* orange */
 
 /* $SECTIONS
@@ -81,33 +80,40 @@ a.nav-link:hover {color: #FB8A2A;} /* orange */
   padding: 30px 0 25px;
 }
 .read-more {padding-top: 25px;}
-/* $Header */
+
+/* $Header 
+------------------------- */
 header {
   color: white;
-  background: url(file:///Users/james/Documents/Web/206tutoring/images/home-cover3.jpg) no-repeat;
+  background-color: #808080;
+  background: url(file:///Users/james/Documents/Web/206tutoring/images/chalkboard.jpg) no-repeat center center;
   -webkit-background-size:  100% 100%;
   -moz-background-size:     100% 100%;
   -o-background-size:       100% 100%;
-  background-size:          100% 100%;
+  background-size:          100% 100%; 
 
 }
 .header-text {padding: 25px 0; text-align: center;}
 .header-text h1 {font-size: 3.5em;}
-.header-text h2 {font-size: 2.5em; font-weight: 100; padding-bottom: 40px;}
+.header-text h2 {font-size: 2.5em; padding-bottom: 40px;}
 .header-text h4 {padding: 15px 0 25px;}
+a.header-email {color: white;}
+a.header-email:hover {color: #FB8A2A;}
 
-/* $Quotes */
+/* $Quotes
+------------------------- */
 .quotes {
 	text-align: center;
-  padding: 30px 0;
+  padding: 50px 0 30px;
 }
-.quotes h4 {font-weight: bold;}
+.quotes h4 {font-weight: 900;}
 .quote-block {
 	display: 	inline-block;
 	width: 		30%;
 }
-/* $About */
-.about {background-color: white; padding: 30px;}
+/* $About
+------------------------- */
+.about {background-color: white; padding: 50px 0 30px;}
 .smta-img {width: 150px; height: 40px;}
 .about-portrait {text-align: center; padding-bottom: 25px;}
 .about-portrait img {
@@ -115,12 +121,18 @@ header {
 	height: 100px;
 }
 .about-credentials h4 {font-weight: bold; padding-bottom: 5px;}
-/* $Services */
+/* $Services
+------------------------- */
 .services {padding-bottom: 30px;}
 .service-icons {text-align: center;}
 .services ul {margin: 5px;}
 .services li {display: inline-block; padding: 0 5px;}
-.more {background: #000;}
+.more {
+  background: #000;
+  color: white;
+  line-height: 125px;
+  font-size: 2.5em;
+}
 /* $Footer
 ------------------------- */
 footer {
@@ -166,7 +178,7 @@ a.btn-orange:hover,
 /* Makes row on page centered of specified width */
 .row {
   zoom: 1;
-  max-width: 1080px;
+  max-width: 900px;
   margin: 0 auto;
 }
 /* row that takes full width of page */
@@ -268,7 +280,7 @@ a.btn-orange:hover,
     padding-right: 5%;
   }
   .one-sixth,
-  .one-fifth,`
+  .one-fifth,
   .one-fourth,
   .one-third,
   .two-sixths,

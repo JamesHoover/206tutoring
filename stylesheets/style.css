@@ -16,7 +16,7 @@
 /* Typography
 ------------------------- */
 html { 
-  background-color: #F5F5F5;
+  background-color: #fff;
   font-size: 16px;
   font-family: 'Open Sans', sans-serif;
 }
@@ -73,13 +73,30 @@ nav li {
 a.nav-link {color: white; font-weight: 900;}
 a.nav-link:hover {color: #FB8A2A;} /* orange */
 
-/* $SECTIONS
+/* $BLOCKS */
+.content-block {background-color: #f5f5f5;}
+.schedule-block {
+  color: #fff;
+  background-color: #099AD2;
+  text-align: center;
+}
+/* $PAGES
 ================================================== */
+/* $HOME
+------------------------- */
+.quote-slider {background-color: #f5f5f5; text-align: center;}
+.home-about {background-color: #099AD2;}
+
+/* $ABOUT
+------------------------- */
+.about-content {text-align: center;}
 .section-title {
   text-align: center;
   padding: 30px 0 25px;
 }
 .read-more {padding-top: 25px;}
+/* $CONTACT FORM */
+
 
 /* $Header 
 ------------------------- */
@@ -113,7 +130,7 @@ a.header-email:hover {color: #FB8A2A;}
 }
 /* $About
 ------------------------- */
-.about {background-color: white; padding: 50px 0 30px;}
+.about {background-color: #fff; padding: 50px 0 30px;}
 .smta-img {width: 150px; height: 40px;}
 .about-portrait {text-align: center; padding-bottom: 25px;}
 .about-portrait img {
@@ -171,6 +188,45 @@ a.btn-orange:hover,
        -o-box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
           box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
 }
+/* $QUOTE BUBBLE
+================================================== */
+.triangle-border {
+  position: relative;
+  padding: 15px;
+  margin: 1em 0 3em;
+  background: #fff;
+
+  -webkit-box-shadow: 2px 2px 4px #888;
+  -moz-box-shadow: 2px 2px 4px #888;
+  box-shadow: 2px 2px 4px #888;
+}
+.triangle-border:before {
+  content: "";
+  position: absolute;
+  bottom: -40px; /* value = - border-top-width - border-bottom-width */
+  left: 40px; /* controls horizontal position */
+  border-width: 20px 20px;
+  border-style: solid;
+  border-color: #fff transparent transparent #fff;
+  /* reduce the damage in FF3.0 */
+  display: block;
+  width: 0;
+}
+/* creates the smaller  triangle */
+/*
+.triangle-border:after {
+  content: "";
+  position: absolute;
+  bottom: -13px; // value = - border-top-width - border-bottom-width 
+  left: 47px; /* value = (:before left) + (:before border-left) - (:after border-left)
+  border-width: 13px 13px;
+  border-style: solid;
+  border-color: #fff transparent transparent #fff;
+  /* reduce the damage in FF3.0
+  display: block;
+  width: 0;
+}
+*/
 /* $GRID
 ================================================== */
 /* Row
@@ -302,27 +358,3 @@ a.btn-orange:hover,
   .last.third-width {clear:none; width: 33.333%;}
   .last.fifth-width {clear:none; width: 20%;}
 }
-
-/* $GENERAL
-========================= */
-/* Text */
-.bold       {font-weight: bold;}
-.italic     {font-style: italic;}
-.uppercase 	{text-transform: uppercase;}
-.capitalize {text-transform: capitalize;}
-.underline 	{text-decoration: underline;}
-.justify 		{text-align: justify;}
-.white      {color: #FFF;}
-.black      {color: #000;}
-/* Display */
-.block 				{display: block;}
-.inline 			{display: inline;}
-.inline-block {display: inline-block;}
-/* Position*/
-.static 	{position: static;}
-.relative {position: relative;}
-.absolute {position: absolute;}
-.fixed 		{position: fixed;}
-/* Alignment */
-.center-align {text-align: center;}
-.center-block {margin: 0 auto;}

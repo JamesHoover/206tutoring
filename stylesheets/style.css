@@ -78,6 +78,35 @@ nav li {
 a.nav-link {color: white; font-weight: 900;}
 a.nav-link:hover {color: #FF9600;} /* orange */
 
+/* $Header 
+------------------------- */
+header {
+  color: white;
+  background-color: #099AD2;
+  /*background: url(file:///Users/james/Documents/Web/206tutoring/images/chalkboard.jpg) no-repeat center center;*/
+  -webkit-background-size:  100% 100%;
+  -moz-background-size:     100% 100%;
+  -o-background-size:       100% 100%;
+  background-size:          100% 100%; 
+
+}
+.header-text {padding: 100px 0; text-align: center;}
+.header-text h1 {font-size: 3.5em; font-weight: 600;}
+.header-text h2 {font-size: 2.5em; padding-bottom: 40px;}
+.header-text h4 {padding: 15px 0 25px;}
+
+
+/* $Footer
+------------------------- */
+footer h1,
+footer h3 {font-weight: 600;}
+footer {
+  padding: 50px 0;
+  background-color: #040404;
+  color: white;
+}
+.footer-logo h1 {padding-bottom: 15px;}
+.footer-contact h3 {text-align: right; padding-bottom: 15px;}
 
 /* $PAGES
 ================================================== */
@@ -88,6 +117,11 @@ a.nav-link:hover {color: #FF9600;} /* orange */
 }
 .content-block h1 {font-weight: 600; padding-bottom: 30px;}
 .content-img img {width: 100%;}
+
+/* $CONTACT FORM */
+.contact-form {padding-bottom: 25px;}
+.contact-form h2 {border: 1px dotted #000; padding: 15px 0; margin-bottom: 15px;}
+
 .schedule-block {
   color: #fff;
   background-color: #099AD2;
@@ -127,91 +161,58 @@ a.nav-link:hover {color: #FF9600;} /* orange */
 }
 .home-consul h1 {padding-bottom: 30px;}
 .consul-icons   {padding-bottom: 30px; border: 1px dotted #000;}
-
+/* $TEST PREP
+------------------------- */
+/* $TUTORING
+------------------------- */
+/* $PIANO
+------------------------- */
 /* $ABOUT
 ------------------------- */
 .about-content {text-align: center; padding: 50px 0;}
 .about-content h1 {font-size: 3em; padding-bottom: 50px;}
 .about-content article {padding-bottom: 100px;}
 .about-article p {padding-bottom: 25px;}
-.section-title {
-  text-align: center;
-  padding: 30px 0 25px;
-}
-/* $CONTACT FORM */
-.contact-form {padding-bottom: 25px;}
-.contact-form h2 {border: 1px dotted #000; padding: 15px 0; margin-bottom: 15px;}
+/* $BLOG
+------------------------- */
+.blog-content {padding-top: 50px;}
+.blog-post    {border-bottom: 1px solid black; margin-bottom: 50px;}
+.blog-post h1 {font-family: 'Courier New'; font-size: 3em; font-weight: 600; padding-bottom: 30px;}
+.blog-post h3 {padding-bottom: 30px;}
+.blog-post p  {font-family: 'Courier New'; padding-bottom: 30px;}
 
-/* $Header 
-------------------------- */
-header {
-  color: white;
-  background-color: #099AD2;
-  /*background: url(file:///Users/james/Documents/Web/206tutoring/images/chalkboard.jpg) no-repeat center center;*/
-  -webkit-background-size:  100% 100%;
-  -moz-background-size:     100% 100%;
-  -o-background-size:       100% 100%;
-  background-size:          100% 100%; 
+.blog-post img {width: 100%; padding-bottom: 30px;}
 
+.intro {color: #000; font-size: 1.5em;}
+.side-blog {padding-bottom: 50px;}
+.side-signup {
+  border: 3px solid #099AD2;
+  padding: 40px 30px;
+  margin-bottom: 50px;
+  color: #099AD2;
 }
-.header-text {padding: 100px 0; text-align: center;}
-.header-text h1 {font-size: 3.5em; font-weight: 600;}
-.header-text h2 {font-size: 2.5em; padding-bottom: 40px;}
-.header-text h4 {padding: 15px 0 25px;}
-a.header-email {color: white;}
-a.header-email:hover {color: #FF9600;}
+.side-signup h1,
+.side-signup h2 { padding-bottom: 30px;}
+.side-signup h1 {font-size: 2.5em; font-weight: 600;}
+.side-signup-form h3 {padding: 15px; margin-bottom: 15px; border: 1px solid #099AD2;}
+.side-signup-form a {width: 100%; text-align: center;}
 
-/* $Quotes
-------------------------- */
-.quotes {
-	text-align: center;
-  padding: 50px 0 30px;
+.recent-block h1 {
+  font-weight: 600;
+  padding: 15px 20px;
+  border-bottom: 1px solid #000;
 }
-.quotes h4 {font-weight: 900;}
-.quote-block {
-	display: 	inline-block;
-	width: 		30%;
-}
-/* $About
-------------------------- */
-.about {background-color: #fff; padding: 50px 0 30px;}
-.smta-img {width: 150px; height: 40px;}
-.about-portrait {text-align: center; padding-bottom: 25px;}
-.about-portrait img {
-	width: 	100px;
-	height: 100px;
-}
-.about-credentials h4 {font-weight: bold; padding-bottom: 5px;}
-/* $Services
-------------------------- */
-.services {padding-bottom: 30px;}
-.service-icons {text-align: center;}
-.services ul {margin: 5px;}
-.services li {display: inline-block; padding: 0 5px;}
-.more {
-  background: #000;
-  color: white;
-  line-height: 125px;
-  font-size: 2.5em;
-}
-/* $Footer
-------------------------- */
-footer h1,
-footer h3 {font-weight: 600;}
-footer {
-  padding: 50px 0;
-	background-color: #040404;
-	color: white;
-}
-.footer-logo h1 {padding-bottom: 15px;}
-.footer-contact h3 {text-align: right; padding-bottom: 15px;}
+.recent-post {padding: 15px 20px; border-bottom: 1px solid #000;}
+.recent-post img {width: 100%;}
+
 
 /* $BUTTONS
 ================================================== */
 a.btn-orange,
-.btn-orange	 {
+.btn-orange,
+a.btn-blue,
+.btn-blue	{
 	color: white;
-	background-color: #FF9600; /* orange */
 	display: inline-block;
   padding: 12px 40px;
   margin: 5px 0;
@@ -229,13 +230,19 @@ a.btn-orange,
           box-shadow: 0 2px 2px rgba(0,0,0,0.1), 0 0 1px rgba(0,0,0,0.3);
 }
 a.btn-orange:hover,
-.btn-orange:hover {
+.btn-orange:hover,
+a.btn-blue:hover,
+.btn-blue:hover {
   -webkit-box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
      -moz-box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
       -ms-box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
        -o-box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
           box-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 1px rgba(255,255,255,1);
 }
+a.btn-orange,
+.btn-orange {background-color: #FF9600;}
+a.btn-blue,
+.btn-blue {background-color: #099AD2;}
 /* $QUOTE BUBBLE
 ================================================== */
 .quote-bubble {

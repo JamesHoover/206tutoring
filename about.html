@@ -4,11 +4,12 @@
 	<!-- TODO: Change routes to correct location when in production -->
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta name="publisher" content="James Hoover"/>	<!-- Credit to the developer of the website -->
+	<meta name="publisher" content="James Hoover"/>
 	<!-- LINK stylesheets -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/stylesheets/abc-reset.css">
 	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/stylesheets/style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<title>206Tutoring - About</title>
 </head>
 <!-- START BODY -->
@@ -18,14 +19,15 @@
 		<div class="full-row grad">
 			<section class="top-nav row">
 				<a href="file:///Users/james/Documents/Web/206tutoring/home.html" class="nav-logo pull first" title="Home">206 <span class="subtext-light">tutoring</span></a>
-				<a href="" class="nav-btn btn-orange btn-contact push"><img src="file:///Users/james/Documents/Web/206tutoring/assets/home_page/contact_envelope_icon.png" alt="contact">CONTACT US</a>
+				<a href="file:///Users/james/Documents/Web/206tutoring/about.html#contact-form" class="nav-btn btn-orange btn-contact push"><img src="file:///Users/james/Documents/Web/206tutoring/assets/home_page/contact_envelope_icon.png" alt="contact">CONTACT US</a>
 				<!-- START NAV -->
 				<nav>
 					<ul class="nav-link-list">
-						<li><a href="" class="nav-link">SERVICES</a></li>
-						<li><a href="file:///Users/james/Documents/Web/206tutoring/about.html" class="nav-link">ABOUT ME</a></li>
+						<li><a href="file:///Users/james/Documents/Web/206tutoring/test_prep.html" class="nav-link">TEST PREP</a></li>
+						<li><a href="file:///Users/james/Documents/Web/206tutoring/tutoring.html" class="nav-link">TUTORING</a></li>
+						<li><a href="file:///Users/james/Documents/Web/206tutoring/piano.html" class="nav-link">PIANO</a></li>
+						<li><a href="file:///Users/james/Documents/Web/206tutoring/about.html" class="nav-link">ABOUT</a></li>
 						<li><a href="file:///Users/james/Documents/Web/206tutoring/blog.html" class="nav-link">BLOG</a></li>
-						<li><a href="" class="nav-link">CALENDAR</a></li>
 					</ul>
 				</nav>
 			</section>
@@ -34,25 +36,25 @@
 	<section class="about-content half-row">
 		<article class="about-article">
 			<h1>About Us</h1>
-			<p>I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level. I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level. I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level.</p>
-			<p>I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level. I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level. I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level.</p>
+			<p>Paragraph here</p>
 		</article>
 		<article class="about-article">
 			<h1>Our Teachers</h1>
-			<p>Our professional teachers that would love to help you succeed. Our professional teachers that would love to help you succeed. Our professional teachers that would love to help you succeed.</p>
+			<p>Our professional teachers that would love to help you succeed.</p>
 			<section class="row">
-				<div class="one-third first">
-					<img src="file:///Users/james/Documents/Web/206tutoring/images/cml-portrait.png" alt="CML Portrait">
+				<div class="teahcer one-third first">
+					<img src="file:///Users/james/Documents/Web/206tutoring/assets/about/Teacher_1.png" alt="Teacher1" class="teacher-img">
 				</div>
-				<div class="one-third">
-					<img src="file:///Users/james/Documents/Web/206tutoring/images/cml-portrait.png" alt="CML Portrait">
+				<div class="teacher one-third">
+					<img src="file:///Users/james/Documents/Web/206tutoring/assets/about/Teacher_2.png" alt="Teacher2" class="teacher-img">
 				</div>
-				<div class="one-third">
-					<img src="file:///Users/james/Documents/Web/206tutoring/images/cml-portrait.png" alt="CML Portrait">
+				<div class="teacher one-third">
+					<img src="file:///Users/james/Documents/Web/206tutoring/assets/about/Teacher_3.png" alt="Teacher3" class="teacher-img">
 				</div>
 			</section>
 		</article>
-		<article class="about-article">
+		<a name="contact-form"></a>
+		<article class="about-article get-intouch">
 			<h1>Get in touch</h1>
 			<!--
 			<?php 
@@ -98,8 +100,8 @@
 					  if (empty($errors)) { 
 						  $from = "From: 206Tutoring"; //Site name
 						  // Change this to your email address you want to form sent to
-						  $to = "jamesfhoover@gmail.com"; 
-						  $subject = "Admin - 206Tutoring! Message from " . $name . "";
+						  $to = "jamesfhoover@gmail.com"; //itscml@gmail.com
+						  $subject = "Admin - 206Tutoring - CONTACT FORM: Message from " . $name . "";
 						  
 						  $body = "Message from " . $name . " ". "
 						  Email: " . $email . " ". "
@@ -145,11 +147,6 @@
 			</article>
 		</article>
 	</section>
-	<section class="schedule-block full-row">
-		<h1>Want to know how we can help you?</h1>
-		<h2>Contact us for a free 30 minute consultation.</h2>
-		<a href="" class="btn-orange">Schedule Appointment</a>
-	</section>
 	<!-- START FOOTER -->
 	<footer>
 		<section class="row">
@@ -163,4 +160,28 @@
 			</article>
 		</section>
 	</footer><!-- END FOOTER -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>		
+	<script type="text/javascript">
+	$(function() {
+		// Insert Responsive Sidebar Icon
+		$('<div class="responsive-nav-icon" />').appendTo('.top-nav.row');
+		$('<div class="responsive-nav-close" />').appendTo('nav');
+
+		// Navigation Slide In
+		$('.responsive-nav-icon').click(function() {
+			$('nav').addClass('slide-in');
+			$('html').css("overflow", "hidden");
+			$('#overlay').show();
+			return false;
+		});
+
+		// Navigation Slide Out
+		$('#overlay, .responsive-nav-close').click(function() {
+			$('nav').removeClass('slide-in');
+			$('html').css("overflow", "auto");
+			$('#overlay').hide();
+			return false;
+		});
+	});
+	</script>
 </body><!-- END BODY -->

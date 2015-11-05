@@ -5,12 +5,6 @@
 ** Copyright: 2015
 ** -------------------------------------------------- */
 
-/* TODO:
---------------------------------------------------
-**
-**
--------------------------------------------------- */
-
 /* $HTML ELEMENTS
 ================================================== */
 /* Typography
@@ -39,6 +33,7 @@ p {
   line-height: 	1.875em;
   padding-bottom: 1.875em;
 }
+.stacked-p {padding-bottom: 1em;}
 /* Links
 ------------------------- */
 a,
@@ -54,9 +49,7 @@ a:hover {
   -o-transition:      all .3s ease-out;
   transition:         all .3s ease-out;
 }
-a:hover {
-  color: #FF9600; /* orange */
-}
+a:hover {color: #FF9600;} /* orange */
 /* $NAVIGATION
 ================================================== */
 .top-nav {padding: 15px 0;}
@@ -72,7 +65,6 @@ nav {
   text-align: center;
   padding-top: 10px;
   }
-/* will probably turn this to img */
 .nav-logo {
   display: inline-block;
 	font-size: 2em;
@@ -88,12 +80,11 @@ a.nav-link:hover {color: #FF9600;} /* orange */
 
 /* $Header 
 ------------------------- */
-
-.home-header      {background: url(file:///Users/james/Documents/Web/206tutoring/assets/home_page/home_hero.png) no-repeat center center;}
-.test-prep-header {background: url(file:///Users/james/Documents/Web/206tutoring/assets/test_prep/test_prep_hero.png) no-repeat center center;}
-.tutoring-header  {background: url(file:///Users/james/Documents/Web/206tutoring/assets/tutoring/tutoring_hero.png) no-repeat center center;}
-.piano-header     {background: url(file:///Users/james/Documents/Web/206tutoring/assets/piano/piano_hero.png) no-repeat center center;}
-.about-header     {background: url(file:///Users/james/Documents/Web/206tutoring/assets/about/about_hero.png) no-repeat center center;}
+.home-header      {background: url(/assets/home_page/home_hero.png) no-repeat center center;}
+.test-prep-header {background: url(/assets/test_prep/test_prep_hero.png) no-repeat center center;}
+.tutoring-header  {background: url(/assets/tutoring/tutoring_hero.png) no-repeat center center;}
+.piano-header     {background: url(/assets/piano/piano_hero.png) no-repeat center center;}
+.about-header     {background: url(/assets/about/about_hero.png) no-repeat center center;}
 
 .home-header, .test-prep-header, .tutoring-header, .piano-header, .about-header {
   color: white;
@@ -122,7 +113,14 @@ a.nav-link:hover {color: #FF9600;} /* orange */
 .content-block h1 {font-weight: 400; padding-bottom: 30px;}
 .content-info h1  {font-weight: 400;}
 .content-img img  {width: 100%;}
-
+.inline-list {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+  font-weight: 200;
+  line-height:  1.875em;
+  padding-bottom: 1em;
+}
+.italic {font-style: italic;}
 /* $CONTACT & $SIGNUP FORM */
 .contact-form       {padding-bottom: 25px;}
 .contact-form label {float: left; padding: 10px 0;}
@@ -156,7 +154,6 @@ a.nav-link:hover {color: #FF9600;} /* orange */
 .home-signup-form ::-moz-placeholder          {color: #fff;}
 .home-signup-form :-ms-input-placeholder      {color: #fff;}
 /* Side form */
-
 .home-signup-form .btn-orange {margin-top: 10px;}
 .schedule-block {
   color: #fff;
@@ -175,10 +172,12 @@ a.nav-link:hover {color: #FF9600;} /* orange */
   border: 1px solid white;
   text-align: left;
 }
-.youtube       {padding: 50px 0; text-align: center; border: 1px dotted #000;}
+.youtube       {width: 100%;}
 .prominent     {font-weight: 600; font-style: normal;}
 .subtext-light {color: #C6C6C6; font-weight: 400;}
 .subtext-dark  {color: #676767; font-weight: 400;}
+.error   {color: #F0825D; font-size: 1.75em; font-weight: bold;}
+.success {color: #82F05D; font-size: 1.75em; font-weight: bold;}
 
 /* $HOME
 ------------------------- */
@@ -225,7 +224,7 @@ a.nav-link:hover {color: #FF9600;} /* orange */
 ------------------------- */
 /* $TUTORING
 ------------------------- */
-/* $PIANO
+/* $Music Lessons
 ------------------------- */
 /* $ABOUT
 ------------------------- */
@@ -253,7 +252,6 @@ a.nav-link:hover {color: #FF9600;} /* orange */
 .blog-post h3  {padding-bottom: 30px; font-style: italic;}
 .blog-post p   {font-family: 'Courier New'; padding-bottom: 30px;}
 .blog-post img {width: 100%; padding-bottom: 30px;}
-
 .intro     {color: #000; font-size: 1.5em;}
 .blog-paragraph {
   max-height: 300px;
@@ -301,8 +299,7 @@ a.nav-link:hover {color: #FF9600;} /* orange */
 .recent-post {padding: 15px 20px; border-bottom: 1px solid #000;}
 .recent-post img {width: 100%;}
 
-
-/* $Footer
+/* $FOOTER
 ------------------------- */
 footer h1 {font-weight: 600;}
 footer h3 {font-weight: 400;}
@@ -364,6 +361,10 @@ a.btn-contact,
 }
 a.btn-contact img,
 .btn-contact img {height: .875em; padding-right: 15px;}
+.btn-contact::before {
+  padding-right: 15px;
+  content: url(/assets/home_page/Contact_envelope_icon.png);
+}
 
 /* $QUOTE BUBBLE
 ================================================== */
@@ -399,21 +400,7 @@ a.btn-contact img,
   display: block;
   width: 0;
 }
-/* creates the smaller  triangle */
-/*
-.triangle-border:after {
-  content: "";
-  position: absolute;
-  bottom: -13px; // value = - border-top-width - border-bottom-width 
-  left: 47px; /* value = (:before left) + (:before border-left) - (:after border-left)
-  border-width: 13px 13px;
-  border-style: solid;
-  border-color: #fff transparent transparent #fff;
-  /* reduce the damage in FF3.0
-  display: block;
-  width: 0;
-}
-*/
+
 /* $GRID
 ================================================== */
 /* Row
@@ -490,17 +477,17 @@ a.btn-contact img,
 --------------------------------------------- */
 .responsive-nav-icon::before,
 .responsive-nav-close::before {
-    color: #099AD2;
-    content: "\f0c9";
-    font-family: FontAwesome;
-    font-size: 22px;
-    position: relative;
+  color: #099AD2;
+  content: "\f0c9";
+  font-family: FontAwesome;
+  font-size: 22px;
+  position: relative;
 }
 
 .responsive-nav-close::before {
-    color: #099AD2;
-    content: "\f00d";
-    font-size: 18px;
+  color: #099AD2;
+  content: "\f00d";
+  font-size: 18px;
 }
 
 .responsive-nav-icon {
@@ -523,17 +510,17 @@ a.btn-contact img,
 }
 
 #overlay {
-    background: 0 0 rgba(0, 0, 0, 0.8);
-    display: none;
-    height: 100%;
-    position: fixed;
-    top: 0; left: 0;
-    -moz-transition: all 0.2s linear 0s;
-    -webkit-transition: all 0.2s linear 0s;
-    -ms-transition: all 0.2s linear 0s;
-    transition: all 0.2s linear 0s;
-    width: 100%;
-    z-index: 90;
+  background: 0 0 rgba(0, 0, 0, 0.8);
+  display: none;
+  height: 100%;
+  position: fixed;
+  top: 0; left: 0;
+  -moz-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear 0s;
+  -ms-transition: all 0.2s linear 0s;
+  transition: all 0.2s linear 0s;
+  width: 100%;
+  z-index: 90;
 }
 
 
@@ -578,29 +565,29 @@ a.btn-contact img,
   /* Mobile menu styling */
   .responsive-nav-icon,
   .responsive-nav-close {
-      display: block;
-      position: absolute;
-      z-index: 1;
+    display: block;
+    position: absolute;
+    z-index: 1;
   }
 
   nav {
-      height: 100%;
-      background-color: #fff;
-      padding: 20px;
-      position: fixed;
-      top: 0; left: -400px;
-      -moz-transition: all 0.2s linear 0s;
-      -webkit-transition: all 0.2s linear 0s;
-      -ms-transition: all 0.2s linear 0s;
-      transition: all 0.2s linear 0s;
-      width: 0;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0; left: -400px;
+    -moz-transition: all 0.2s linear 0s;
+    -webkit-transition: all 0.2s linear 0s;
+    -ms-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+    width: 0;
   }
   
   nav.slide-in {
-      left: 0;
-      overflow-y: scroll;
-      width: 280px;
-      z-index: 100;
+    left: 0;
+    overflow-y: scroll;
+    width: 280px;
+    z-index: 100;
   }
   
   nav .nav-link {
@@ -641,27 +628,27 @@ a.btn-contact img,
 /* Mobile menu styling */
   .responsive-nav-icon,
   .responsive-nav-close {
-      display: block;
-      position: absolute;
-      z-index: 1;
+    display: block;
+    position: absolute;
+    z-index: 1;
   }
   nav {
-      height: 100%;
-      background-color: #fff;
-      padding: 20px;
-      position: fixed;
-      top: 0; left: -400px;
-      -moz-transition: all 0.2s linear 0s;
-      -webkit-transition: all 0.2s linear 0s;
-      -ms-transition: all 0.2s linear 0s;
-      transition: all 0.2s linear 0s;
-      width: 0;
+    height: 100%;
+    background-color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0; left: -400px;
+    -moz-transition: all 0.2s linear 0s;
+    -webkit-transition: all 0.2s linear 0s;
+    -ms-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+    width: 0;
   }
   nav.slide-in {
-      left: 0;
-      overflow-y: scroll;
-      width: 280px;
-      z-index: 100;
+    left: 0;
+    overflow-y: scroll;
+    width: 280px;
+    z-index: 100;
   }
   nav .nav-link {
     display: block;
@@ -669,13 +656,8 @@ a.btn-contact img,
     padding: 10px 0;
   }
   a.nav-link {color: #167CEF;}
-
-  /* 50% width causes two units per line so center the last odd unit */
-  .one-third.last, .one-fifth.last {clear:both; width:50%; margin: 0 auto;}
   aside.side-blog {width: 100%; margin-left: 0;}
 }
 /* COMPUTER */
 @media screen and (min-width: 64em){
-  .last.third-width {clear:none; width: 33.333%;}
-  .last.fifth-width {clear:none; width: 20%;}
 }

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- TODO: Change routes to correct location when in production -->
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="publisher" content="James Hoover"/>
+	<!-- LINK stylesheets -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/abc-reset.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<title>206Tutoring - Piano</title>
+</head>
+<!-- START BODY -->
+<body>
+	<!-- START HEADER -->
+	<header class="piano-header">
+		<div class="full-row grad">
+			<section class="top-nav row">
+				<a href="/home.php" class="nav-logo pull first" title="Home">206 <span class="subtext-light">tutoring</span></a>
+				<a href="/about.php#contact-form" class="nav-btn btn-orange btn-contact push">CONTACT US</a>
+				<!-- START NAV -->
+				<nav>
+					<ul class="nav-link-list">
+						<li><a href="/test_prep.html" class="nav-link">TEST PREP</a></li>
+						<li><a href="/tutoring.html" class="nav-link">TUTORING</a></li>
+						<li><a href="/music.html" class="nav-link">Music Lessons</a></li>
+						<li><a href="/about.php" class="nav-link">ABOUT</a></li>
+						<li><a href="/blog.php" class="nav-link">BLOG</a></li>
+					</ul>
+				</nav>
+			</section>
+		</div>
+		<main class="header-text row">
+			<h1>MUSIC LESSONS</h1>
+			<h2></h2>
+			<a href="/about.html#contact-form" class="btn-orange">Contact Us Now</a>
+		</main>
+	</header><!-- END HEADER -->
+	<section class="content-block row">
+		<article class="content-info one-half first">
+			<h1>Music Lessons</h1>
+			<p>206 Tutoring offers music lessons in piano, guitar, voice, violin, viola, drums, and more. If you’re interested in learning an instrument anew, or already have some expertise and want to pick up new techniques and styles, we have the right instructor for you.</p>
+			<p>We pride ourselves on hiring only the most skilled and dedicated music-education professionals, and matching students to someone aligned with their interests, aspirations, and ability level. Our instructors’ training runs the gamut from classical to rock, from jazz to pop—movie music and video-game music are particular specialties.</p>
+			<p><span class="prominent">Our music lessons are fun,</span> with a light-hearted approach puts you in in a better mindset to learn. All students of all ages and all levels of experience are welcome.</p>
+			<p><span class="prominent">Our music lessons are flexible,</span> with schedules and instruction much more individualized than you’ll find at a typical music academy. These are <span class="italic">not</span> your typical music lessons with rigid and grumpy professionals!</p>
+		</article>
+		<section class="content-img one-half">
+		<iframe class="youtube" height="315" src="https://www.youtube.com/embed/LaVJkBkCyTU" frameborder="0" allowfullscreen></iframe>
+		</section>
+	</section>
+	<section class="schedule-block full-row">
+		<h1>Interested in beginning your journey?</h1>
+		<h2>Contact us to take a 30-minute introductory lesson for free.</h2>
+		<a href="/about.php#contact-form" class="btn-orange">CONTACT US NOW</a>
+	</section>
+	<!-- START FOOTER -->
+	<footer>
+		<section class="row">
+			<article class="footer-logo pull first">
+				<h1>206 <span class="subtext-dark">tutoring</span></h1>
+				<h3>&copy;206 Tutoring</h3>
+			</article>
+			<article class="footer-contact push">
+				<h3>(206) 551-7843</h3>
+				<h3>chris@206tutoring.com</h3>
+			</article>
+		</section>
+	</footer><!-- END FOOTER -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>		
+	<script type="text/javascript">
+	$(function() {
+		// Insert Responsive Sidebar Icon
+		$('<div class="responsive-nav-icon" />').appendTo('.top-nav.row');
+		$('<div class="responsive-nav-close" />').appendTo('nav');
+
+		// Navigation Slide In
+		$('.responsive-nav-icon').click(function() {
+			$('nav').addClass('slide-in');
+			$('html').css("overflow", "hidden");
+			$('#overlay').show();
+			return false;
+		});
+
+		// Navigation Slide Out
+		$('#overlay, .responsive-nav-close').click(function() {
+			$('nav').removeClass('slide-in');
+			$('html').css("overflow", "auto");
+			$('#overlay').hide();
+			return false;
+		});
+	});
+	</script>
+</body><!-- END BODY -->

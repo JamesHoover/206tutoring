@@ -4,11 +4,12 @@
 	<!-- TODO: Change routes to correct location when in production -->
 	<meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta name="publisher" content="James Hoover"/>	<!-- Credit to the developer of the website -->
+	<meta name="publisher" content="James Hoover"/>
 	<!-- LINK stylesheets -->
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/stylesheets/abc-reset.css">
-	<link rel="stylesheet" type="text/css" href="file:///Users/james/Documents/Web/206tutoring/stylesheets/style.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/abc-reset.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<title>206Tutoring - About</title>
 </head>
 <!-- START BODY -->
@@ -17,15 +18,16 @@
 	<header class="about-header">
 		<div class="full-row grad">
 			<section class="top-nav row">
-				<a href="file:///Users/james/Documents/Web/206tutoring/home.html" class="nav-logo pull first" title="Home">206 <span class="subtext-light">tutoring</span></a>
-				<a href="" class="nav-btn btn-orange btn-contact push"><img src="file:///Users/james/Documents/Web/206tutoring/assets/home_page/contact_envelope_icon.png" alt="contact">CONTACT US</a>
+				<a href="/home.php" class="nav-logo pull first" title="Home">206 <span class="subtext-light">tutoring</span></a>
+				<a href="/about.php#contact-form" class="nav-btn btn-orange btn-contact push">CONTACT US</a>
 				<!-- START NAV -->
 				<nav>
 					<ul class="nav-link-list">
-						<li><a href="" class="nav-link">SERVICES</a></li>
-						<li><a href="file:///Users/james/Documents/Web/206tutoring/about.html" class="nav-link">ABOUT ME</a></li>
-						<li><a href="file:///Users/james/Documents/Web/206tutoring/blog.html" class="nav-link">BLOG</a></li>
-						<li><a href="" class="nav-link">CALENDAR</a></li>
+						<li><a href="/test_prep.html" class="nav-link">TEST PREP</a></li>
+						<li><a href="/tutoring.html" class="nav-link">TUTORING</a></li>
+						<li><a href="/music.html" class="nav-link">Music Lessons</a></li>
+						<li><a href="/about.php" class="nav-link">ABOUT</a></li>
+						<li><a href="/blog.php" class="nav-link">BLOG</a></li>
 					</ul>
 				</nav>
 			</section>
@@ -33,26 +35,37 @@
 	</header><!-- END HEADER -->
 	<section class="about-content half-row">
 		<article class="about-article">
-			<h1>About Us</h1>
-			<p>I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level. I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level. I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level.</p>
-			<p>I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level. I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level. I also teach lessons in piano. If you have always wanted to make that leap and take your musical skills to the next level, im the guy that will get you there. I am acredited by the seattle music association and can help any skill level.</p>
+			<h1>About Chris Morris-Lent</h1>
+			<p>I grew up in Seattle, attending public schools from kindergarten onward, and graduating from Garfield High School in 2006. I have a B.A. from Columbia in English literature. I’ve been tutoring since 2007 and have also worked as a writer, an editor, a researcher, a poker player, and a software tester.</p>
 		</article>
 		<article class="about-article">
-			<h1>Our Teachers</h1>
-			<p>Our professional teachers that would love to help you succeed. Our professional teachers that would love to help you succeed. Our professional teachers that would love to help you succeed.</p>
+			<h1>Mission Statement</h1>
+			<p>The approach to education in 21st-century America results too often in anxiety, frustration and stress. Too many tutors exacerbate these stresses by promoting or profiting from a high-stakes environment: assigning homework or worksheets of their own, demanding the wrong things of their students, or otherwise misunderstanding their role.</p>
+			<p class="italic">The way we see it, our job is the opposite of that.</p>
+			<p>206 Tutoring exists because we want to work against the worst aspects of school (and music lessons), and embody the best ones.</p>
+			<p>We teach to make learning more worthwhile and more fun for our students.</p>
+			<p>We tutor to <span class="italic">relieve</span> anxiety and frustration and stress.</p>
+			<p>We tutor to help my students spend <span class="italic">less</span> time on homework, and more time on the things they love to do.</p>
+			<p>We promote a relaxing and comfortable environment. We encourage our students to ask questions about the material and their interests. We cultivate a disposition for curiosity.</p>
+			<p>Working with 206 Tutoring, students feel like themselves, can put each difficulty in the right context, and focus on solving it.</p>
+			<p></p>
+		</article>
+		<article class="about-article">
+			<h1>Our Instructors</h1>
 			<section class="row">
-				<div class="one-third first">
-					<img src="file:///Users/james/Documents/Web/206tutoring/images/cml-portrait.png" alt="CML Portrait">
+				<div class="teahcer one-third first">
+					<img src="/assets/about/Teacher_1.png" alt="Teacher1" class="teacher-img">
 				</div>
-				<div class="one-third">
-					<img src="file:///Users/james/Documents/Web/206tutoring/images/cml-portrait.png" alt="CML Portrait">
+				<div class="teacher one-third">
+					<img src="/assets/about/Teacher_2.png" alt="Teacher2" class="teacher-img">
 				</div>
-				<div class="one-third">
-					<img src="file:///Users/james/Documents/Web/206tutoring/images/cml-portrait.png" alt="CML Portrait">
+				<div class="teacher one-third">
+					<img src="/assets/about/Teacher_3.png" alt="Teacher3" class="teacher-img">
 				</div>
 			</section>
 		</article>
-		<article class="about-article">
+		<a name="contact-form"></a>
+		<article class="about-article get-intouch">
 			<h1>Get in touch</h1>
 			<?php 
 				if (isset($_REQUEST['submitted'])) {
@@ -92,13 +105,12 @@
 				  
 				  }
 				  //End of validation 
-
 				  if (isset($_REQUEST['submitted'])) {
 					  if (empty($errors)) { 
 						  $from = "From: 206Tutoring"; //Site name
 						  // Change this to your email address you want to form sent to
-						  $to = "jamesfhoover@gmail.com"; 
-						  $subject = "Admin - 206Tutoring! Message from " . $name . "";
+						  $to = "itscml@gmail.com";
+						  $subject = "Admin - 206Tutoring - CONTACT FORM: Message from " . $name . "";
 						  
 						  $body = "Message from " . $name . " ". "
 						  Email: " . $email . " ". "
@@ -108,17 +120,16 @@
 					  }
 					}
 				?>
-
 				<?php 
 				  //Print Errors
 				  if (isset($_REQUEST['submitted'])) {
 				  // Print any error messages. 
 				  if (!empty($errors)) { 
-				  echo '<hr /><h3>The following occurred:</h3><ul>'; 
+				  echo '<hr /><h3 class="error">The following occurred:</h3><ul>'; 
 				  // Print each error. 
 				  foreach ($errors as $msg) { echo '<li>'. $msg . '</li>';}
-				  echo '</ul><h3>Your mail could not be sent due to input errors.</h3><hr />';}
-				   else{echo '<hr /><h3 align="center">Thank you for your message!</h3><hr />'; 
+				  echo '</ul><h3 class="error">Your mail could not be sent due to input errors.</h3><hr />';}
+				   else{echo '<hr /><h3 class="success" align="center">Thank you for your message!</h3><hr />'; 
 				  }
 				  }
 				//End of errors array
@@ -136,15 +147,12 @@
 			    <input name="submitted" type="submit" value="Send Message" class="btn-orange btn-submit"/>
 			  </form>
 			</section>
-			<h2 class="prominent">206 Tutoring</h2>
-			<h2>1234 Fake St.</h2>
-			<h2>Seattle, WA 98123</h2	>
+			<article class="address">
+				<h2 class="prominent">206 Tutoring and Music Lessons</h2>
+				<h2>7711 14th Avenue NE</h2>
+				<h2>Seattle, WA 98115</h2	>
+			</article>
 		</article>
-	</section>
-	<section class="schedule-block full-row">
-		<h1>Want to know how we can help you?</h1>
-		<h2>Contact us for a free 30 minute consultation.</h2>
-		<a href="" class="btn-orange">Schedule Appointment</a>
 	</section>
 	<!-- START FOOTER -->
 	<footer>
@@ -154,9 +162,33 @@
 				<h3>&copy;206 Tutoring</h3>
 			</article>
 			<article class="footer-contact push">
-				<h3>(206) 555-1234</h3>
-				<h3>206tutoring@gmail.com</h3>
+				<h3>(206) 551-7843</h3>
+				<h3>chris@206tutoring.com</h3>
 			</article>
 		</section>
 	</footer><!-- END FOOTER -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>		
+	<script type="text/javascript">
+	$(function() {
+		// Insert Responsive Sidebar Icon
+		$('<div class="responsive-nav-icon" />').appendTo('.top-nav.row');
+		$('<div class="responsive-nav-close" />').appendTo('nav');
+
+		// Navigation Slide In
+		$('.responsive-nav-icon').click(function() {
+			$('nav').addClass('slide-in');
+			$('html').css("overflow", "hidden");
+			$('#overlay').show();
+			return false;
+		});
+
+		// Navigation Slide Out
+		$('#overlay, .responsive-nav-close').click(function() {
+			$('nav').removeClass('slide-in');
+			$('html').css("overflow", "auto");
+			$('#overlay').hide();
+			return false;
+		});
+	});
+	</script>
 </body><!-- END BODY -->
